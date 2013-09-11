@@ -164,7 +164,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #66696d;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -172,6 +172,40 @@ textarea {
   font-weight: 300;
 }
 /* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  margin: .75em 0;
+  font-weight: bold;
+}
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 20px;
+  font-size: 2.0rem;
+}
+h3 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+h5 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+h6 {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
 hr {
   background-color: #ccc;
   border: 0;
@@ -214,9 +248,15 @@ i {
   font-style: italic;
 }
 blockquote {
+  border-left: 3px solid #e4e4e2;
   margin: 0 1.5em;
+  padding: 0 1.5em;
+}
+blockquote blockquote {
+  margin-right: 0;
 }
 address {
+  font-style: italic;
   margin: 0 0 1.5em;
 }
 pre {
@@ -274,7 +314,13 @@ table {
   width: 100%;
 }
 th {
+  border-bottom: 3px solid #000;
   font-weight: bold;
+  padding: 7px 3px;
+}
+td {
+  border-bottom: 1px solid #e4e4e2;
+  padding: 5px 3px;
 }
 img {
   height: auto;
@@ -417,15 +463,16 @@ textarea {
 }
 /* Links */
 a {
-  color: royalblue;
+  color: #24282c;
+  text-decoration: none;
 }
 a:visited {
-  color: purple;
+  color: #24282c;
 }
 a:hover,
 a:focus,
 a:active {
-  color: midnightblue;
+  color: #66696d;
 }
 /* Alignment */
 .alignleft {
