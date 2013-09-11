@@ -13,13 +13,17 @@
 			<?php agobenda_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
+	</header><!-- .entry-header -->	
 
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+	<?php if ( is_search()||is_front_page() ) : // Only display Excerpts and Thumbs for Search and Front Page ?>
+	<div class="entry-thumb">
+		<?php the_post_thumbnail('homepage-thumb'); ?>
+	</div><!-- .entry-thumb -->
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
+
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'agobenda' ) ); ?>
 		<?php
