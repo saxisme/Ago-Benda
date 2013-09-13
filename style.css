@@ -711,7 +711,20 @@ body.full-width .site-footer {
 .page-template-template-homepage-php ul#filters li {
   float: none;
   display: inline-block;
+  padding: 5px 10px;
+  padding: 0.5rem 1rem;
   margin-bottom: 0;
+  border: 0;
+}
+.page-template-template-homepage-php ul#filters li a {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #bec4cc;
+  border: 1px solid #bec4cc;
+}
+.page-template-template-homepage-php ul#filters li a.selected {
+  color: #66696d;
+  border: 1px solid #66696d;
 }
 .page-template-template-homepage-php ul#iso-loop {
   margin-left: 0;

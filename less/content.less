@@ -87,12 +87,11 @@ Layout: Content-Sidebar
 	clear: both;
 	width: 100%;
 }
+
 /*
 Theme Name: AgoBenda
 Layout: Full-Width
 */
-
-
 body.full-width {
 	.content-area {
 		float: none;
@@ -120,7 +119,21 @@ body.full-width {
 		li {
 			float: none;
 			display: inline-block;
+			padding: 5px 10px;
+			padding: 0.5rem 1rem;
 			margin-bottom: 0;
+			border:0;
+
+			a {
+				text-transform: uppercase;
+				font-weight: 400;
+				color:@gray;
+				border: 1px solid @gray;
+			}
+			a.selected {
+					color:@graydark;
+					border: 1px solid @graydark;
+				}
 		}
 	}
  	ul#iso-loop {
