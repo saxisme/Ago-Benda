@@ -1,64 +1,17 @@
 @media only screen and (max-width: 768px) {
-  /* For general mobile layouts */
-	#page {
-		position: relative;
-	}
-	#masthead {
-		width: 100%;
-		height: 102px;
-		float: none;
-		.site-title, .site-description {
-			//display: none;
-		}
-		.navigation-main {
-			background-color: @black;
-			position: relative;
-			top:-10px;
-		}
-		.menu-toggle, .navigation-main.toggled .nav-menu {
-			display: block;
-			position: relative;
-			top: -42px;
-			right: 0;
-			text-align: right;
-			color: @gray;
-		}
-		.menu-toggle {
-			margin-right: 30px;
-			float: right;
-			width: 20px;
-		}
-		.navigation-main.toggled .menu-toggle {
-			color:@blue;
-		}
-		.navigation-main.toggled .nav-menu {
-			margin-top: 40px;
-			width: 100%;
-			float: left;
 
-			li {
-				float: none;
-				text-align: left;
-
-				a {
-					line-height: 35px;
-					line-height: 3.5rem;
-					text-transform: uppercase;
-					padding-left: 30px;
-				}
-			}
-		}
-		.navigation-main li {
-			float: left;
-		}
-	} 
-	#main {
-		width: 100%;
-		float: none;
-	}
 }
-@media only screen and (min-width: 769px) and (max-width: 1280px) {
+
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
 	/* For default screens */
+	.navigation-main {
+		max-width: 520px;
+		margin-top: 10px;
+	}
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
@@ -72,4 +25,3 @@
 @media only screen and (min-device-width: 1281px) {
 	/* For large screens */
 }
-

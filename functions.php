@@ -9,7 +9,7 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
+	$content_width = 960; /* pixels */
 
 if ( ! function_exists( 'agobenda_setup' ) ) :
 /**
@@ -102,10 +102,10 @@ function agobenda_scripts() {
 	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400|Reenie+Beanie', '', '20130911', $media = 'all' );
 
 	//Masonry script
-	if ( is_home() ) {
-		wp_enqueue_script( 'agobenda-masonry', get_template_directory_uri() . '/js/masonry.pkgd.js', array( 'jquery' ), '20130911' );
-		wp_enqueue_script( 'agobenda-masonry-setting', get_template_directory_uri() . '/js/custom.js', array( 'agobenda-masonry' ), '20130911' );
-	}
+	//if ( is_home() ) {
+		//wp_enqueue_script( 'agobenda-masonry', get_template_directory_uri() . '/js/masonry.pkgd.js', array( 'jquery' ), '20130911' );
+		wp_enqueue_script( 'agobenda-masonry-setting', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20130911' );
+	//}
 }
 add_action( 'wp_enqueue_scripts', 'agobenda_scripts' );
 /**
@@ -165,7 +165,7 @@ function sax_project_custom_post_type() {
 		'label'               => __( 'Project', 'agobenda' ),
 		'description'         => __( 'Project information pages', 'agobenda' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'trackbacks', 'revisions', 'custom-fields', 'page-attributes', 'post-formats', ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'post-formats', ),
 		'taxonomies'          => array( 'project_taxonomy', 'project_taxonomy_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -264,11 +264,44 @@ function project_taxonomy_tag()  {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'tag', 'project', $args );
+	register_taxonomy( 'project_tag', 'project', $args );
 
 }
 
 // Hook into the 'init' action
 add_action( 'init', 'project_taxonomy_tag', 0 );
 
+}
+
+/**
+* Add Custom Taxonomy Terms To The Post Class
+* http://wordpress.stackexchange.com/questions/2266/add-post-classes-for-custom-taxonomies-to-custom-post-type
+*/
+
+add_filter( 'post_class', 'wpse_2266_custom_taxonomy_post_class', 10, 3 );
+
+if ( ! function_exists('wpse_2266_custom_taxonomy_post_class') ) {
+    function wpse_2266_custom_taxonomy_post_class($classes, $class, $ID) {
+
+        $taxonomies_args = array(
+            'public' => true,
+            '_builtin' => false,
+        );
+
+        $taxonomies = get_taxonomies( $taxonomies_args, 'names', 'and' );
+
+        $terms = get_the_terms( (int) $ID, (array) $taxonomies );
+
+        if ( ! empty( $terms ) ) {
+            foreach ( (array) $terms as $order => $term ) {
+                if ( ! in_array( $term->slug, $classes ) ) {
+                    $classes[] = $term->slug;
+                }
+            }
+        }
+
+        $classes[] = 'clearfix';
+
+        return $classes;
+    }
 }
