@@ -535,9 +535,8 @@ a:active {
 /* =Menu
 ----------------------------------------------- */
 .navigation-main {
-  clear: both;
   display: block;
-  float: left;
+  float: right;
   width: 100%;
   font-family: 'Reenie Beanie', cursive;
   font-size: 18px;
@@ -601,6 +600,26 @@ a:active {
 }
 /* =Content
 ----------------------------------------------- */
+.site {
+  background-color: #FFF;
+  margin: 0 auto;
+  max-width: 1230px;
+}
+.site-branding {
+  margin: 12px 0;
+  max-width: 330px;
+  float: left;
+}
+.site-content {
+  margin: 0 auto;
+  margin: 0 85px;
+}
+.site-main {
+  height: 100%;
+}
+.content-area {
+  margin: 0 auto;
+}
 .hentry {
   margin: 0 0 1.5em;
 }
@@ -619,6 +638,21 @@ a:active {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+/*Projects Grid*/
+.home #main .hentry {
+  margin-bottom: 1em;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  height: auto;
+}
+.home #main .hentry .entry-content {
+  margin: 0;
+}
+.home .projects-container {
+  height: 100%;
 }
 /* =Asides
 ----------------------------------------------- */
@@ -721,99 +755,18 @@ Layout
 /*
 Home Masonry
 */
-#main {
-  width: 100%;
-}
-.home #main article {
-  width: 25%;
-  padding: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-@media only screen and (max-width: 618px) {
-  /* For general mobile layouts */
-  .home #main article {
-    width: 90%;
-    padding: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-}
-@media only screen and (min-width: 619px) and (max-width: 768px) {
-  /* For general mobile layouts */
-  .home #main article {
-    width: 45%;
-    padding: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 1280px) {
-  /* For default screens */
-  .home #main article {
-    width: 28%;
-    padding: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-}
 @media only screen and (max-width: 768px) {
-  /* For general mobile layouts */
-  #page {
-    position: relative;
-  }
-  #masthead {
-    width: 100%;
-    height: 102px;
-    float: none;
-  }
-  #masthead .navigation-main {
-    background-color: #24282c;
-    position: relative;
-    top: -10px;
-  }
-  #masthead .menu-toggle,
-  #masthead .navigation-main.toggled .nav-menu {
-    display: block;
-    position: relative;
-    top: -42px;
-    right: 0;
-    text-align: right;
-    color: #bec4cc;
-  }
-  #masthead .menu-toggle {
-    margin-right: 30px;
-    float: right;
-    width: 20px;
-  }
-  #masthead .navigation-main.toggled .menu-toggle {
-    color: #3892e3;
-  }
-  #masthead .navigation-main.toggled .nav-menu {
-    margin-top: 40px;
-    width: 100%;
-    float: left;
-  }
-  #masthead .navigation-main.toggled .nav-menu li {
-    float: none;
-    text-align: left;
-  }
-  #masthead .navigation-main.toggled .nav-menu li a {
-    line-height: 35px;
-    line-height: 3.5rem;
-    text-transform: uppercase;
-    padding-left: 30px;
-  }
-  #masthead .navigation-main li {
-    float: left;
-  }
-  #main {
-    width: 100%;
-    float: none;
-  }
+  
 }
-@media only screen and (min-width: 769px) and (max-width: 1280px) {
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  
+}
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
   /* For default screens */
+  .navigation-main {
+    max-width: 520px;
+    margin-top: 10px;
+  }
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* For portrait layouts only */

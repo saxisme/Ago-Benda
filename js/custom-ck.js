@@ -1,1 +1,1 @@
-jQuery(document).ready(function(e){e("#main").masonry({singleMode:!0})});
+jQuery(document).ready(function(e){e(".moveplugins_isotopes_container").isotope("reLayout")});
