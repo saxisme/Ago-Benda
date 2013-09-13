@@ -640,20 +640,6 @@ a:active {
   margin: 0 0 1.5em;
 }
 /*Projects Grid*/
-.home #main .hentry {
-  margin-bottom: 1em;
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 220px;
-  height: auto;
-}
-.home #main .hentry .entry-content {
-  margin: 0;
-}
-.home .projects-container {
-  height: 100%;
-}
 /* =Asides
 ----------------------------------------------- */
 .blog .format-aside .entry-title,
