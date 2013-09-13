@@ -3,16 +3,38 @@
 .site{
 	background-color: #FFF;
 	margin: 0 auto;
-	max-width: 1230px;
+	width:960px;
+}
+.site-header, .site-content, .site-footer {
+	width:960px;
+}
+.site-header {
+	height: 124px;
+	position: fixed;
+	top: 0;
+	z-index:999;
 }
 .site-branding {
 	margin: 12px 0;
-	max-width: 330px;
+	width: 190px;
+	height: 124px;
 	float: left;
+	background: url('images/logo.png') top left no-repeat;
+}
+.site-title a {
+	display: inline-block;
+	margin: 0;
+	width:190px;
+	height:100px;
+	text-indent: -9999px;
+}
+.site-description {
+	display: none;
 }
 .site-content {
 	margin: 0 auto;
-	margin: 0 85px;
+	margin-top: 124px;
+	padding-top: 24px;
 }
 .site-main {
 	height: 100%;
@@ -42,7 +64,75 @@
 	margin: 0 0 1.5em;
 }
 
-/*Projects Grid*/
-.home {
+/*
+Theme Name: AgoBenda
+Layout: Content-Sidebar
+*/
 
+.content-area {
+	float: left;
+	margin: 0 -30% 0 0;
+	width: 100%;
+}
+.site-main {
+	margin: 0 30% 0 0;
+	padding-right: 48px;
+}
+.site-content .widget-area {
+	float: right;
+	overflow: hidden;
+	width: 30%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+/*
+Theme Name: AgoBenda
+Layout: Full-Width
+*/
+
+
+body.full-width {
+	.content-area {
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.site-main {
+		margin: 0 auto;
+		padding-right: 0;
+	}
+	.site-footer {
+		clear: both;
+		width: 100%;
+	}
+}
+
+/*Homepage Projects*/
+.page-template-template-homepage-php {
+	ul#filters {
+		width: 960px;
+		text-align: center;
+		margin-left: 0;
+		margin-bottom: 22px;
+
+		li {
+			float: none;
+			display: inline-block;
+			margin-bottom: 0;
+		}
+	}
+ 	ul#iso-loop {
+ 		margin-left: 0;
+ 	
+	 	li {
+			margin: 0;
+			padding: 0 30px 30px 0;
+			max-width: 300px;
+		}
+		li:nth-child(3n) {
+			padding-right:0; 
+		}
+ 	}
 }

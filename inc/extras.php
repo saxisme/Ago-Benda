@@ -24,6 +24,16 @@ function agobenda_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
+	if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'template-full-width.php' ) || is_page_template( 'template-homepage.php' ) || is_singular( 'project' ) )
+		$classes[] = 'full-width';
+
+	if ( is_page_template( 'page-templates/front-page.php' ) ) {
+		$classes[] = 'template-front-page full-width';
+		if ( has_post_thumbnail() )
+			$classes[] = 'has-post-thumbnail';
+		if ( is_active_sidebar( 'sidebar-2' ) && is_active_sidebar( 'sidebar-3' ) )
+			$classes[] = 'two-sidebars';
+	}
 
 	return $classes;
 }

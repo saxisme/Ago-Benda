@@ -104,7 +104,7 @@ function agobenda_scripts() {
 	//Masonry script
 	//if ( is_home() ) {
 		//wp_enqueue_script( 'agobenda-masonry', get_template_directory_uri() . '/js/masonry.pkgd.js', array( 'jquery' ), '20130911' );
-		wp_enqueue_script( 'agobenda-masonry-setting', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20130911' );
+		//wp_enqueue_script( 'agobenda-masonry-setting', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20130911' );
 	//}
 }
 add_action( 'wp_enqueue_scripts', 'agobenda_scripts' );

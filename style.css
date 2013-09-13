@@ -537,10 +537,10 @@ a:active {
 .navigation-main {
   display: block;
   float: right;
-  width: 100%;
   font-family: 'Reenie Beanie', cursive;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 32px;
+  font-size: 3.2rem;
+  margin-top: 24px;
 }
 .navigation-main ul {
   list-style: none;
@@ -555,6 +555,7 @@ a:active {
   display: block;
   text-decoration: none;
   color: #bec4cc;
+  margin-left: 4.8rem;
 }
 .navigation-main ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -573,16 +574,14 @@ a:active {
   width: 200px;
 }
 .navigation-main li:hover > a {
-  color: #ffffff;
-  background-color: #3892e3;
+  color: #66696d;
 }
 .navigation-main ul li:hover > ul {
   display: block;
 }
 .navigation-main li.current_page_item a,
 .navigation-main li.current-menu-item a {
-  color: #ffffff;
-  background-color: #3892e3;
+  color: #66696d;
 }
 /* Small menu */
 .menu-toggle {
@@ -603,16 +602,40 @@ a:active {
 .site {
   background-color: #FFF;
   margin: 0 auto;
-  max-width: 1230px;
+  width: 960px;
+}
+.site-header,
+.site-content,
+.site-footer {
+  width: 960px;
+}
+.site-header {
+  height: 124px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 .site-branding {
   margin: 12px 0;
-  max-width: 330px;
+  width: 190px;
+  height: 124px;
   float: left;
+  background: url('images/logo.png') top left no-repeat;
+}
+.site-title a {
+  display: inline-block;
+  margin: 0;
+  width: 190px;
+  height: 100px;
+  text-indent: -9999px;
+}
+.site-description {
+  display: none;
 }
 .site-content {
   margin: 0 auto;
-  margin: 0 85px;
+  margin-top: 124px;
+  padding-top: 24px;
 }
 .site-main {
   height: 100%;
@@ -639,7 +662,68 @@ a:active {
   clear: both;
   margin: 0 0 1.5em;
 }
-/*Projects Grid*/
+/*
+Theme Name: AgoBenda
+Layout: Content-Sidebar
+*/
+.content-area {
+  float: left;
+  margin: 0 -30% 0 0;
+  width: 100%;
+}
+.site-main {
+  margin: 0 30% 0 0;
+  padding-right: 48px;
+}
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 30%;
+}
+.site-footer {
+  clear: both;
+  width: 100%;
+}
+/*
+Theme Name: AgoBenda
+Layout: Full-Width
+*/
+body.full-width .content-area {
+  float: none;
+  margin: 0 auto;
+  width: 100%;
+}
+body.full-width .site-main {
+  margin: 0 auto;
+  padding-right: 0;
+}
+body.full-width .site-footer {
+  clear: both;
+  width: 100%;
+}
+/*Homepage Projects*/
+.page-template-template-homepage-php ul#filters {
+  width: 960px;
+  text-align: center;
+  margin-left: 0;
+  margin-bottom: 22px;
+}
+.page-template-template-homepage-php ul#filters li {
+  float: none;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.page-template-template-homepage-php ul#iso-loop {
+  margin-left: 0;
+}
+.page-template-template-homepage-php ul#iso-loop li {
+  margin: 0;
+  padding: 0 30px 30px 0;
+  max-width: 300px;
+}
+.page-template-template-homepage-php ul#iso-loop li:nth-child(3n) {
+  padding-right: 0;
+}
 /* =Asides
 ----------------------------------------------- */
 .blog .format-aside .entry-title,
@@ -749,10 +833,6 @@ Home Masonry
 }
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
   /* For default screens */
-  .navigation-main {
-    max-width: 520px;
-    margin-top: 10px;
-  }
 }
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* For portrait layouts only */
