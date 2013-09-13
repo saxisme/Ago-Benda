@@ -8,11 +8,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'agobenda' ) ); ?>
 		<?php
-		if ( has_post_thumbnail($thumbnail->ID)) {
-	      echo '<a href="' . get_permalink( $thumbnail->ID ) . '" title="' . esc_attr( $thumbnail->post_title ) . '">';
-	      echo get_the_post_thumbnail($thumbnail->ID, 'homepage-thumb');
-	      echo '</a>';
-	    } ?>
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'agobenda' ),
+				'after'  => '</div>',
+			) );
+		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
