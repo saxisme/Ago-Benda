@@ -1,14 +1,20 @@
 <?php
-/*
- * Template Name: Project Homepage
+/**
+ * Template Name: Full-width Page Template, No Sidebar
  *
+ * Description: Twenty Twelve loves the no-sidebar look as much as
+ * you do. Use this page template to remove the sidebar from any page.
+ *
+ * Tip: to remove the sidebar from all posts and pages simply remove
+ * any active widgets from the Main Sidebar area, and the sidebar will
+ * disappear everywhere.
  *
  * @package AgoBenda
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area full-width">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -17,12 +23,11 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					/* Wi are calling the plugin shortcode to fill the page.
-					 * No content is 
+					/* Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
-					echo do_shortcode( '[isotope-posts]' );
+					get_template_part( 'content', get_post_format() );
 				?>
 
 			<?php endwhile; ?>
