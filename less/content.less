@@ -121,7 +121,7 @@ body.full-width {
 			float: none;
 			display: inline-block;
 			padding: 5px 10px;
-			padding: 0.5rem 1rem;
+			padding: 0.3rem 0.8rem;
 			margin-bottom: 0;
 			border:0;
 
@@ -131,7 +131,8 @@ body.full-width {
 				color:@gray;
 				border: 1px solid @gray;
 			}
-			a.selected {
+
+			a.selected, a:hover {
 					color:@graydark;
 					border: 1px solid @graydark;
 				}
@@ -148,5 +149,37 @@ body.full-width {
 		li:nth-child(3n) {
 			padding-right:0; 
 		}
+ 	}
+ 	.iso-thumb {
+ 		position: relative;
+ 	}
+ 	.iso-thumb a img:hover {
+ 		opacity: 0.6;
+ 	}
+
+ 	.iso-thumb-hover {
+ 		//Absoulte centering thanks to: http://codepen.io/shshaw/full/gEiDt#Fixed
+ 		position: absolute;
+	    // bottom:44%; 
+	    // width:40px;
+	    // height: 40px;
+	    // margin:0 auto;
+	    // margin-left: -20px;
+	    // left: 260px;
+	    // margin-left: -130px;
+	    // right:0px;
+    	z-index:100;
+    	background-color: red;
+ 		display: none;
+ 		width: 50%;
+		height: 50%;
+		overflow: auto;
+		margin: auto;
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+ 	}
+
+ 	.iso-post:hover .iso-thumb-hover {
+ 		display: block;
  	}
 }

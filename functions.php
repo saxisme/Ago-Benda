@@ -305,3 +305,13 @@ if ( ! function_exists('wpse_2266_custom_taxonomy_post_class') ) {
         return $classes;
     }
 }
+
+/**
+ * Modify the footer credits for JetPack Inifite Scroll
+ **/
+add_filter('infinite_scroll_credit','lc_infinite_scroll_credit');
+function lc_infinite_scroll_credit(){
+ $content = '<a href="/privacy-statement/" title="Privacy Statement">Privacy Statement</a>';
+ return $content;
+}
+/** End JetPack **/
