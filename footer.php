@@ -13,9 +13,10 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'agobenda_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'agobenda' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'agobenda' ), 'WordPress' ); ?></a>
+			<p>Agostina Benda - Make-up Artist <span class="sep"> | </span>All rights reserved &copy; <?php echo date(Y); ?>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'agobenda' ), 'AgoBenda', '<a href="http://theblink.it" rel="designer">Sacha Benda</a>' ); ?>
+			<?php printf( __( 'Credits: %2$s.', 'agobenda' ), 'AgoBenda', '<a href="http://theblink.it" rel="designer">B&middot;link</a>' ); ?>
+		</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
