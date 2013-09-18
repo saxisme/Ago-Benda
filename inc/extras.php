@@ -24,7 +24,7 @@ function agobenda_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-	if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'template-full-width.php' ) || is_page_template( 'template-homepage.php' ) || is_singular( 'project' ) )
+	if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template( 'template-full-width.php' ) || is_page_template( 'template-homepage.php' ) )
 		$classes[] = 'full-width';
 
 	if ( is_page_template( 'page-templates/front-page.php' ) ) {

@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+			<?php get_template_part( 'content', 'project' ); ?>
 
 			<?php agobenda_content_nav( 'nav-below' ); ?>
 
@@ -27,4 +27,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
