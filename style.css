@@ -463,11 +463,11 @@ textarea {
 }
 /* Links */
 a {
-  color: #24282c;
+  color: #393939;
   text-decoration: none;
 }
 a:visited {
-  color: #24282c;
+  color: #393939;
 }
 a:hover,
 a:focus,
@@ -571,7 +571,7 @@ textarea:focus,
 .navigation-main a {
   display: block;
   text-decoration: none;
-  color: #bec4cc;
+  color: #9e9e9e;
   margin-left: 4.8rem;
 }
 .navigation-main ul ul {
@@ -620,7 +620,7 @@ textarea:focus,
   background-color: #FFF;
   margin: 0 auto;
   width: 960px;
-  width: 90%;
+  width: 100%;
 }
 .site-header,
 .site-content,
@@ -630,11 +630,16 @@ textarea:focus,
 }
 .site-header {
   height: 124px;
-  background-color: #ffffff;
-  width: 90%;
+  background-color: #fbfbfb;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 999;
+}
+.site-header-container,
+.site-footer-container {
+  width: 90%;
+  margin: 0 auto;
 }
 .site-branding {
   margin: 12px 0;
@@ -654,6 +659,10 @@ textarea:focus,
 }
 .site-description {
   display: none;
+}
+.site-content-container {
+  width: 90%;
+  margin: 0 auto;
 }
 .site-content {
   margin: 0 auto;
@@ -685,6 +694,9 @@ textarea:focus,
   clear: both;
   margin: 0 0 1.5em;
 }
+.site-footer-container {
+  text-align: center;
+}
 /*
 Theme Name: AgoBenda
 Layout: Content-Sidebar
@@ -711,10 +723,13 @@ Layout: Content-Sidebar
 Theme Name: AgoBenda
 Layout: Full-Width
 */
+body.full-width .site-content-container {
+  width: 100%;
+}
 body.full-width .content-area {
   float: none;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
 }
 body.full-width .site-main {
   margin: 0 auto;
@@ -725,6 +740,9 @@ body.full-width .site-footer {
   width: 100%;
 }
 /*Homepage Projects*/
+.page-template-template-homepage-php .site-content-container {
+  width: 100%;
+}
 .page-template-template-homepage-php ul#filters {
   width: 960px;
   width: 100%;
@@ -743,8 +761,8 @@ body.full-width .site-footer {
 .page-template-template-homepage-php ul#filters li a {
   text-transform: uppercase;
   font-weight: 400;
-  color: #bec4cc;
-  border: 1px solid #bec4cc;
+  color: #9e9e9e;
+  border: 1px solid #9e9e9e;
 }
 .page-template-template-homepage-php ul#filters li a.selected,
 .page-template-template-homepage-php ul#filters li a:hover {

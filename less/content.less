@@ -4,7 +4,7 @@
 	background-color: #FFF;
 	margin: 0 auto;
 	width:960px;
-	width:90%;
+	width:100%;
 }
 .site-header, .site-content, .site-footer {
 	width:960px;
@@ -13,10 +13,14 @@
 .site-header {
 	height: 124px;
 	background-color: @white;
-	width: 90%;
+	width: 100%;
 	position: fixed;
 	top: 0;
 	z-index:999;
+}
+.site-header-container, .site-footer-container {
+	width: 90%;
+	margin: 0 auto;
 }
 .site-branding {
 	margin: 12px 0;
@@ -36,6 +40,10 @@
 }
 .site-description {
 	display: none;
+}
+.site-content-container {
+	width: 90%;
+	margin: 0 auto;
 }
 .site-content {
 	margin: 0 auto;
@@ -69,6 +77,9 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+.site-footer-container {
+	text-align: center;
+}
 
 /*
 Theme Name: AgoBenda
@@ -99,10 +110,13 @@ Theme Name: AgoBenda
 Layout: Full-Width
 */
 body.full-width {
+	.site-content-container {
+		width: 100%;
+	}
 	.content-area {
 		float: none;
 		margin: 0 auto;
-		width: 100%;
+		width: 90%;
 	}
 	.site-main {
 		margin: 0 auto;
@@ -116,6 +130,9 @@ body.full-width {
 
 /*Homepage Projects*/
 .page-template-template-homepage-php {
+	.site-content-container {
+		width: 100%;
+	}
 	ul#filters {
 		width: 960px;
 		width: 100%;
