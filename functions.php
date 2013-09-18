@@ -139,179 +139,21 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-if ( ! function_exists('sax_project_custom_post_type') ) {
-
 /**
- * Register Project Custom Post Type.
+ * Load custom functions file.
  */
-function sax_project_custom_post_type() {
-
-	$labels = array(
-		'name'                => _x( 'Projects', 'Post Type General Name', 'agobenda' ),
-		'singular_name'       => _x( 'Project', 'Post Type Singular Name', 'agobenda' ),
-		'menu_name'           => __( 'Project', 'agobenda' ),
-		'parent_item_colon'   => __( 'Parent Project:', 'agobenda' ),
-		'all_items'           => __( 'All Projects', 'agobenda' ),
-		'view_item'           => __( 'View Project', 'agobenda' ),
-		'add_new_item'        => __( 'Add New Project', 'agobenda' ),
-		'add_new'             => __( 'New Project', 'agobenda' ),
-		'edit_item'           => __( 'Edit Project', 'agobenda' ),
-		'update_item'         => __( 'Update Project', 'agobenda' ),
-		'search_items'        => __( 'Search projects', 'agobenda' ),
-		'not_found'           => __( 'No projects found', 'agobenda' ),
-		'not_found_in_trash'  => __( 'No projects found in Trash', 'agobenda' ),
-	);
-	$args = array(
-		'label'               => __( 'Project', 'agobenda' ),
-		'description'         => __( 'Project information pages', 'agobenda' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'post-formats', ),
-		'taxonomies'          => array( 'project_taxonomy', 'project_taxonomy_tag' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'menu_icon'           => '',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
-	);
-	register_post_type( 'project', $args );
-
-}
-
-// Hook into the 'init' action
-add_action( 'init', 'sax_project_custom_post_type', 0 );
-
-}
-
-if ( ! function_exists('project_taxonomy') ) {
-
+require get_template_directory() . '/inc/custom.php';
 
 /**
- * Register Project Custom Taxonomy.
+ * Load Custom Metabox files.
  */
-function project_taxonomy()  {
-
-	$labels = array(
-		'name'                       => _x( 'Projects', 'Taxonomy General Name', 'agobenda' ),
-		'singular_name'              => _x( 'Project', 'Taxonomy Singular Name', 'agobenda' ),
-		'menu_name'                  => __( 'Project Category', 'agobenda' ),
-		'all_items'                  => __( 'All Projects Categories', 'agobenda' ),
-		'parent_item'                => __( 'Parent Project Category', 'agobenda' ),
-		'parent_item_colon'          => __( 'Parent Project Category:', 'agobenda' ),
-		'new_item_name'              => __( 'New Project Category Name', 'agobenda' ),
-		'add_new_item'               => __( 'Add New Project Category', 'agobenda' ),
-		'edit_item'                  => __( 'Edit Project Category', 'agobenda' ),
-		'update_item'                => __( 'Update Project Category', 'agobenda' ),
-		'separate_items_with_commas' => __( 'Separate project categories with commas', 'agobenda' ),
-		'search_items'               => __( 'Search project categories', 'agobenda' ),
-		'add_or_remove_items'        => __( 'Add or remove project categories', 'agobenda' ),
-		'choose_from_most_used'      => __( 'Choose from the most used project categories', 'agobenda' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => true,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'project_category', 'project', $args );
-
-}
-
-// Hook into the 'init' action
-add_action( 'init', 'project_taxonomy', 0 );
-
-}
-
-if ( ! function_exists('project_taxonomy_tag') ) {
-
+add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 /**
- * Register Project Custom Taxonomy Tag.
+ * Initialize the metabox class.
  */
-function project_taxonomy_tag()  {
+function cmb_initialize_cmb_meta_boxes() {
 
-	$labels = array(
-		'name'                       => _x( 'Tags', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Tag', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Project Tags', 'text_domain' ),
-		'all_items'                  => __( 'All Tags', 'text_domain' ),
-		'parent_item'                => __( 'Parent Tag', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Tag:', 'text_domain' ),
-		'new_item_name'              => __( 'New Tag Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Tag', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Tag', 'text_domain' ),
-		'update_item'                => __( 'Update Tag', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate tag with commas', 'text_domain' ),
-		'search_items'               => __( 'Search tags', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove tags', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used tags', 'text_domain' ),
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => false,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'project_tag', 'project', $args );
+	if ( ! class_exists( 'cmb_Meta_Box' ) )
+		require_once 'lib/metabox/init.php';
 
 }
-
-// Hook into the 'init' action
-add_action( 'init', 'project_taxonomy_tag', 0 );
-
-}
-
-/**
-* Add Custom Taxonomy Terms To The Post Class
-* http://wordpress.stackexchange.com/questions/2266/add-post-classes-for-custom-taxonomies-to-custom-post-type
-*/
-
-add_filter( 'post_class', 'wpse_2266_custom_taxonomy_post_class', 10, 3 );
-
-if ( ! function_exists('wpse_2266_custom_taxonomy_post_class') ) {
-    function wpse_2266_custom_taxonomy_post_class($classes, $class, $ID) {
-
-        $taxonomies_args = array(
-            'public' => true,
-            '_builtin' => false,
-        );
-
-        $taxonomies = get_taxonomies( $taxonomies_args, 'names', 'and' );
-
-        $terms = get_the_terms( (int) $ID, (array) $taxonomies );
-
-        if ( ! empty( $terms ) ) {
-            foreach ( (array) $terms as $order => $term ) {
-                if ( ! in_array( $term->slug, $classes ) ) {
-                    $classes[] = $term->slug;
-                }
-            }
-        }
-
-        $classes[] = 'clearfix';
-
-        return $classes;
-    }
-}
-
-/**
- * Modify the footer credits for JetPack Inifite Scroll
- **/
-add_filter('infinite_scroll_credit','lc_infinite_scroll_credit');
-function lc_infinite_scroll_credit(){
- $content = '<a href="/privacy-statement/" title="Privacy Statement">Privacy Statement</a>';
- return $content;
-}
-/** End JetPack **/
