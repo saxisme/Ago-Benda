@@ -68,23 +68,22 @@
 		</footer><!-- .entry-meta -->
 	</div> <!-- post-container -->
 	<div class="post-images">
-<?php //if ( $post->post_type == 'project' && $post->post_status == 'publish' ) {
-		$attachments = get_posts( array(
-			'post_type' => 'attachment',
-			'posts_per_page' => -1,
-			'post_parent' => $post->ID,
-			'exclude'     => get_post_thumbnail_id()
-		) );
+		<?php //http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
+				$attachments = get_posts( array(
+					'post_type' => 'attachment',
+					'posts_per_page' => -1,
+					'post_parent' => $post->ID,
+					'exclude'     => get_post_thumbnail_id()
+				) );
 
-		if ( $attachments ) {
-			foreach ( $attachments as $attachment ) {
-				$class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-				$thumbimg = wp_get_attachment_link( $attachment->ID, 'thumbnail-size', true );
-				echo '<li class="' . $class . ' project-thumbnail">' . $thumbimg . '</li>';
-			}
-			
-		}
-	//}
-?>
+				if ( $attachments ) {
+					foreach ( $attachments as $attachment ) {
+						$class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
+						$thumbimg = wp_get_attachment_link( $attachment->ID, 'thumbnail-size', true );
+						echo '<li class="' . $class . ' project-thumbnail">' . $thumbimg . '</li>';
+					}
+					
+				}
+		?>
 	</div>
 </article><!-- #post-## -->
