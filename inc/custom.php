@@ -196,12 +196,6 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'type' => 'text_small',
 			),
 			array(
-				'name' => __('Skills', 'agobenda' ),
-				'desc' => __('', 'agobenda' ),
-				'id'   => $prefix . 'project_skills',
-				'type' => 'text',
-			),
-			array(
 				'name' => __('Year', 'agobenda' ),
 				'desc' => __('', 'agobenda' ),
 				'id'   => $prefix . 'project_year',

@@ -6,7 +6,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
 	<div class="post-container">
 		<header class="entry-header">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -18,6 +18,14 @@
 
 		<div class="entry-content">
 			<?php the_content(); ?>
+			
+			<?php //cho custom_taxonomies_terms_links(); ?>
+
+			<?php
+			//Retrieve the taxonomy list
+			$tax_list = get_the_term_list( $post->ID, 'project_category', '', ',', '' );
+			?> 
+
 <div>
 
 </div>			
@@ -30,10 +38,29 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-meta">
+			<?php 
+				$key1="_cmb_project_titleclient";
+				$key2="_cmb_project_photography";
+				$key3="_cmb_project_styling";
+				$key4="_cmb_project_makeup";
+				$key5="_cmb_project_year";
+				//'<span class="project-details detail-">'
+			?>
+			<?php echo '<ul class="project-details">'; ?>
+			<?php if ( $key1 != '') { echo '<li><span class="detail-title">Title / Client: </span><span class="project-detail">' . get_post_meta($post->ID, $key1, true) . '</span></li>';}?>
+			<?php if ( $key2 != '') { echo '<li><span class="detail-title">Photography: </span><span class="project-detail">' . get_post_meta($post->ID, $key2, true) . '</span></li>';}?>
+			<?php if ( $key3 != '') { echo '<li><span class="detail-title">Styling: </span><span class="project-detail">' . get_post_meta($post->ID, $key3, true) . '</span></li>';}?>
+			<?php if ( $key4 != '') { echo '<li><span class="detail-title">Makeup: </span><span class="project-detail">' . get_post_meta($post->ID, $key4, true) . '</span></li>';}?>
+			<?php if ( $key5 != '') { echo '<li><span class="detail-title">Year: </span><span class="project-detail">' . get_post_meta($post->ID, $key5, true) . '</span></li>';}?>
+			<?php echo '</ul>'; ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$category_list = get_the_category_list( __( ', ', 'agobenda' ) );
 
+				//Retrieve the taxonomy list
+				$cat_list = get_the_term_list( $post->ID, 'project_category', '', ',', '' );
+				$tax_list = get_the_term_list( $post->ID, 'project_tag', '', ',', '' );
+			
 				/* translators: used between list items, there is a space after the comma */
 				$tag_list = get_the_tag_list( '', __( ', ', 'agobenda' ) );
 
@@ -48,9 +75,9 @@
 				} else {
 					// But this blog has loads of categories so we should probably display them here
 					if ( '' != $tag_list ) {
-						$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
+						$meta_text = __( 'This entry was posted in '. $cat_list. ' and tagged '. $tax_list. '. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
 					} else {
-						$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
+						$meta_text = __( 'This entry was posted in '. $cat_list. '. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
 					}
 
 				} // end check for categories on this blog
@@ -72,15 +99,15 @@
 				$attachments = get_posts( array(
 					'post_type' => 'attachment',
 					'posts_per_page' => -1,
-					'post_parent' => $post->ID,
-					'exclude'     => get_post_thumbnail_id()
+					'post_parent' => $post->ID
+					//'exclude'     => get_post_thumbnail_id()
 				) );
 
 				if ( $attachments ) {
 					foreach ( $attachments as $attachment ) {
 						$class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
 						$thumbimg = wp_get_attachment_link( $attachment->ID, 'thumbnail-size', true );
-						echo '<li class="' . $class . ' project-thumbnail">' . $thumbimg . '</li>';
+						echo '<li class="' . $class . ' project-thumbnail alignright">' . $thumbimg . '</li>';
 					}
 					
 				}

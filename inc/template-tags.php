@@ -5,6 +5,7 @@
  * Eventually, some of the functionality here could be replaced by core features
  *
  * @package AgoBenda
+ * @package AgoBenda - navigation links for single project posts
  */
 
 if ( ! function_exists( 'agobenda_content_nav' ) ) :
@@ -33,11 +34,18 @@ function agobenda_content_nav( $nav_id ) {
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'agobenda' ); ?></h1>
 
-	<?php if ( is_single() ) : // navigation links for single posts ?>
+	<?php if ( is_singular( 'project' ) ) : // navigation links for single project posts ?>
+
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="icon-angle-left"></i>', 'Previous post link', 'agobenda' ) . '</span>' ); ?>
+		<div class="nav-all"><i class="icon-th"></i></div>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . _x( '<i class="icon-angle-right"></i>', 'Next post link', 'agobenda' ) . '</span>' ); ?>
+
+	<?php elseif ( is_single() ) : // navigation links for single posts ?>
 
 		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'agobenda' ) . '</span> %title' ); ?>
 		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'agobenda' ) . '</span>' ); ?>
-
+	
+	
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>

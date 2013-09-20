@@ -77,6 +77,9 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+.widget ul > li {
+	list-style: none;
+}
 .site-footer-container {
 	text-align: center;
 }
@@ -206,4 +209,38 @@ body.full-width {
  	.iso-post:hover .iso-thumb-hover {
  		display: block;
  	}
+}
+
+/*Projects - Single*/
+body.single-project {
+	.post-navigation {
+		text-align: center;
+		width: 150px;
+		margin: 0 auto;
+		margin-top: 36px;
+		margin-bottom: 60px;
+		
+		.nav-previous, .nav-next, .nav-all {
+			width: 50px;
+			float: left;
+			text-align: center;
+		}
+	}
+	.post-container {
+		width:41.666666666667%;
+		float: left;
+	}
+	.post-images {
+		width:58.333333333333%;
+		float: right;
+
+		li {
+			list-style: none;
+			margin-bottom: 24px;
+		}
+	}
+	.project-details {
+			list-style: none;
+			margin-left: 0;
+	}
 }

@@ -14,5 +14,14 @@ Functions
 Custom functions and customisations are inside inc/custom.php
 
 Body Classes
-============
+------------
 Extra body classes are added through the original function in extras.php
+
+New Templates
+-------------
+Custom templates are created for:
+- template-full-width.php
+- template-homepage-php
+- single-project.php
+- content-project.php
+- inc/template-tags.php (updated)

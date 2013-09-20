@@ -100,6 +100,7 @@ function agobenda_scripts() {
 	//Sacha Benda - Blink
 	
 	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400|Reenie+Beanie', '', '20130911', $media = 'all' );
+	wp_enqueue_style( 'fontawesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', '', '20130911', $media = 'all' );
 
 	//Masonry script
 	//if ( is_home() ) {
