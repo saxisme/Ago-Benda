@@ -840,15 +840,19 @@ body.full-width .site-footer {
   padding: 0;
   margin: 0;
 }
-.page-template-template-homepage-php .iso-thumb img {
+.page-template-template-homepage-php .iso-thumb a img {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.page-template-template-homepage-php .iso-thumb img:hover {
+.page-template-template-homepage-php .iso-thumb a img:hover {
   opacity: 0.2;
+  -webkit-transform: scale(2.5);
+  -moz-transform: scale(2.5);
+  -o-transform: scale(2.5);
+  transform: scale(2.5);
 }
 /*Projects - Single*/
 body.single-project .post-navigation {
@@ -880,6 +884,13 @@ body.single-project .post-images li {
 body.single-project .project-details {
   list-style: none;
   margin-left: 0;
+}
+/*Jetpack Sharing icons*/
+body div.sharedaddy div.sd-block {
+  border-top: 0;
+}
+body div.sharedaddy div.sd-block .sd-content {
+  float: none;
 }
 /* =Asides
 ----------------------------------------------- */

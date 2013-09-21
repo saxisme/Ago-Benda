@@ -15,6 +15,7 @@ Functions
 - Custom function for "love" button: http://wp.tutsplus.com/tutorials/how-to-create-a-simple-post-rating-system-with-wordpress-and-jquery/
 Moved the scripts inside a function for correct register
 - Files are located in inc folder and css in content.less
+- Jetpack Sharing: activated for project CPT and customized code in contet-project.php to move the default position
 
 Body Classes
 ------------
