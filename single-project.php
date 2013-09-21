@@ -11,10 +11,10 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
+			
+			<?php agobenda_content_nav( 'nav-below' ); ?>
 
 			<?php get_template_part( 'content', 'project' ); ?>
-
-			<?php agobenda_content_nav( 'nav-below' ); ?>
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template
@@ -27,5 +27,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -59,8 +59,8 @@ if ( ! function_exists('project_taxonomy') ) {
 function project_taxonomy()  {
 
 	$labels = array(
-		'name'                       => _x( 'Projects', 'Taxonomy General Name', 'agobenda' ),
-		'singular_name'              => _x( 'Project', 'Taxonomy Singular Name', 'agobenda' ),
+		'name'                       => _x( 'Project Category', 'Taxonomy General Name', 'agobenda' ),
+		'singular_name'              => _x( 'Project Category', 'Taxonomy Singular Name', 'agobenda' ),
 		'menu_name'                  => __( 'Project Category', 'agobenda' ),
 		'all_items'                  => __( 'All Projects Categories', 'agobenda' ),
 		'parent_item'                => __( 'Parent Project Category', 'agobenda' ),
@@ -194,12 +194,6 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'desc' => __('', 'agobenda' ),
 				'id'   => $prefix . 'project_makeup',
 				'type' => 'text_small',
-			),
-			array(
-				'name' => __('Skills', 'agobenda' ),
-				'desc' => __('', 'agobenda' ),
-				'id'   => $prefix . 'project_skills',
-				'type' => 'text',
 			),
 			array(
 				'name' => __('Year', 'agobenda' ),

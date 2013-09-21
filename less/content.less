@@ -77,6 +77,59 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+.entry-meta {
+	color:@gray;
+}
+.single-format-standard, 
+.archive {
+	.entry-meta-top {
+		float: left;
+		width:15.41666666666667%;
+	}
+	.entry-container {
+		float: right;
+		width: 75%;
+	}
+}
+
+/*Rating Button*/
+article .entry-meta-top .post-like { 
+	margin-top:1em 
+}
+article .entry-meta-top .count {
+	width: 15px; 
+	height: 16px; 
+	display: block; 
+	float:left; 
+	margin-right: 4px;
+	margin-top: -4px;
+}
+article .entry-meta-top .like,
+{
+	background:url(inc/rating-button/images/icons.png) no-repeat 0 0; 
+	width: 15px; 
+	height: 16px; 
+	display: block; 
+	float:left; 
+	margin-right: 4px; 
+	-moz-transition: all 0.2s ease-out 0.1s; 
+	-webkit-transition: all 0.2s ease-out 0.1s; 
+	-o-transition: all 0.2s ease-out 0.1s 
+}
+article .entry-meta-top .post-like a:hover .like{ 
+	background:url(inc/rating-button/images/icons.png) no-repeat -16px 0 
+}
+article .entry-meta-top .voted .like, 
+article .entry-meta-top .post-like .alreadyvoted{ 
+	background-position:-32px 0 
+}
+
+/*Widgets*/
+.widget ul > li {
+	list-style: none;
+}
+
+/*Footer*/
 .site-footer-container {
 	text-align: center;
 }
@@ -88,17 +141,17 @@ Layout: Content-Sidebar
 
 .content-area {
 	float: left;
-	margin: 0 -30% 0 0;
+	margin: 0 -26.47058823529412% 0 0;
 	width: 100%;
 }
 .site-main {
-	margin: 0 30% 0 0;
+	margin: 0 26.47058823529412% 0 0;
 	padding-right: 48px;
 }
 .site-content .widget-area {
 	float: right;
 	overflow: hidden;
-	width: 30%;
+	width: 26.47058823529412%;
 }
 .site-footer {
 	clear: both;
@@ -206,4 +259,38 @@ body.full-width {
  	.iso-post:hover .iso-thumb-hover {
  		display: block;
  	}
+}
+
+/*Projects - Single*/
+body.single-project {
+	.post-navigation {
+		text-align: center;
+		width: 150px;
+		margin: 0 auto;
+		margin-top: 36px;
+		margin-bottom: 60px;
+		
+		.nav-previous, .nav-next, .nav-all {
+			width: 50px;
+			float: left;
+			text-align: center;
+		}
+	}
+	.post-container {
+		width:41.666666666667%;
+		float: left;
+	}
+	.post-images {
+		width:58.333333333333%;
+		float: right;
+
+		li {
+			list-style: none;
+			margin-bottom: 24px;
+		}
+	}
+	.project-details {
+			list-style: none;
+			margin-left: 0;
+	}
 }

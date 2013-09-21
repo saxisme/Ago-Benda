@@ -100,6 +100,7 @@ function agobenda_scripts() {
 	//Sacha Benda - Blink
 	
 	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400|Reenie+Beanie', '', '20130911', $media = 'all' );
+	wp_enqueue_style( 'fontawesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', '', '20130911', $media = 'all' );
 
 	//Masonry script
 	//if ( is_home() ) {
@@ -108,6 +109,7 @@ function agobenda_scripts() {
 	//}
 }
 add_action( 'wp_enqueue_scripts', 'agobenda_scripts' );
+
 /**
  * Add custom image size
  */
@@ -157,3 +159,8 @@ function cmb_initialize_cmb_meta_boxes() {
 		require_once 'lib/metabox/init.php';
 
 }
+
+/**
+ * Load rating button files.
+ */
+require get_template_directory() . '/inc/rating-button/functions.php';
