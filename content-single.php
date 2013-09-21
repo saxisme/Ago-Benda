@@ -5,23 +5,34 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-
-		<div class="entry-meta">
-			<?php agobenda_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
+	<div class="entry-meta entry-meta-top">
+		<?php agobenda_posted_on(); ?>
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'agobenda' ),
-				'after'  => '</div>',
-			) );
+			$key_1_value = get_post_meta( get_the_ID(), 'votes_count', true );
+			// check if the custom field has a value
+			if( ! empty( $key_1_value ) ) {
+			  echo getPostLikeLink(get_the_ID());
+			}
 		?>
-	</div><!-- .entry-content -->
+
+	</div><!-- .entry-meta -->
+
+	<div class="entry-container clear">
+		<header class="entry-header">
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<?php the_content(); ?>
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'agobenda' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+	</div><!-- entry-container -->
+	<div style="clear:both"></div>
 
 	<footer class="entry-meta">
 		<?php
@@ -59,5 +70,7 @@
 		?>
 
 		<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
+
 	</footer><!-- .entry-meta -->
+	
 </article><!-- #post-## -->

@@ -11,7 +11,10 @@ The modification to the standard code is made in the respective less files
 
 Functions
 ---------
-Custom functions and customisations are inside inc/custom.php
+- Custom functions and customisations are inside inc/custom.php
+- Custom function for "love" button: http://wp.tutsplus.com/tutorials/how-to-create-a-simple-post-rating-system-with-wordpress-and-jquery/
+Moved the scripts inside a function for correct register
+- Files are located in inc folder and css in content.less
 
 Body Classes
 ------------

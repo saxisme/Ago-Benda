@@ -109,6 +109,7 @@ function agobenda_scripts() {
 	//}
 }
 add_action( 'wp_enqueue_scripts', 'agobenda_scripts' );
+
 /**
  * Add custom image size
  */
@@ -158,3 +159,8 @@ function cmb_initialize_cmb_meta_boxes() {
 		require_once 'lib/metabox/init.php';
 
 }
+
+/**
+ * Load rating button files.
+ */
+require get_template_directory() . '/inc/rating-button/functions.php';
