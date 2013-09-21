@@ -832,33 +832,23 @@ body.full-width .site-footer {
 }
 .page-template-template-homepage-php .iso-thumb {
   position: relative;
+  /* IMAGE HOVER ANIMATIONS */
+
+  background: url(images/post-thumb.png) no-repeat center;
+  overflow: hidden;
+  background-color: #66696d !important;
+  padding: 0;
+  margin: 0;
 }
-.page-template-template-homepage-php .iso-thumb a img {
+.page-template-template-homepage-php .iso-thumb img {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.page-template-template-homepage-php .iso-thumb a img:hover {
-  opacity: 0.6;
-}
-.page-template-template-homepage-php .iso-thumb-hover {
-  z-index: 100;
-  background-color: red;
-  display: none;
-  width: 50%;
-  height: 50%;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-.page-template-template-homepage-php .iso-post:hover .iso-thumb-hover {
-  display: block;
+.page-template-template-homepage-php .iso-thumb img:hover {
+  opacity: 0.2;
 }
 /*Projects - Single*/
 body.single-project .post-navigation {
