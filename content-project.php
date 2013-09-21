@@ -17,6 +17,11 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
+			<?php 
+			//remove the jetpacj sharing filter
+				remove_filter( 'the_content', 'sharing_display', 19 ); 
+			?>
+  			<?php //remove_filter( 'the_excerpt', 'sharing_display', 19 ); //to use just in case for the excerpt?>
 			<?php the_content(); ?>
 			
 			<?php //cho custom_taxonomies_terms_links(); ?>
@@ -26,25 +31,14 @@
 			$tax_list = get_the_term_list( $post->ID, 'project_category', '', ',', '' );
 			?> 
 
-<div>
-
-</div>			
 			<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'agobenda' ),
-					'after'  => '</div>',
-				) );
-			?>
-		</div><!-- .entry-content -->
-
-		<footer class="entry-meta">
-			<?php 
-				$key1="_cmb_project_titleclient";
-				$key2="_cmb_project_photography";
-				$key3="_cmb_project_styling";
-				$key4="_cmb_project_makeup";
-				$key5="_cmb_project_year";
-				//'<span class="project-details detail-">'
+			//project details / custom fields
+			$key1="_cmb_project_titleclient";
+			$key2="_cmb_project_photography";
+			$key3="_cmb_project_styling";
+			$key4="_cmb_project_makeup";
+			$key5="_cmb_project_year";
+			//'<span class="project-details detail-">'
 			?>
 			<?php echo '<ul class="project-details">'; ?>
 			<?php if ( $key1 != '') { echo '<li><span class="detail-title">Title / Client: </span><span class="project-detail">' . get_post_meta($post->ID, $key1, true) . '</span></li>';}?>
@@ -53,6 +47,22 @@
 			<?php if ( $key4 != '') { echo '<li><span class="detail-title">Makeup: </span><span class="project-detail">' . get_post_meta($post->ID, $key4, true) . '</span></li>';}?>
 			<?php if ( $key5 != '') { echo '<li><span class="detail-title">Year: </span><span class="project-detail">' . get_post_meta($post->ID, $key5, true) . '</span></li>';}?>
 			<?php echo '</ul>'; ?>
+		
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'agobenda' ),
+					'after'  => '</div>',
+				) );
+			?>
+
+			<?php 
+			//insert the jetpack sharing in this position
+				echo sharing_display(); 
+			?>
+		</div><!-- .entry-content -->
+
+		<footer class="entry-meta">
+			
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$category_list = get_the_category_list( __( ', ', 'agobenda' ) );
