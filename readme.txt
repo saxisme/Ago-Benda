@@ -33,4 +33,5 @@ Custom templates are created for:
 Isotope Plugin
 ==============
 The isotopo plugin has been modified:
-- 
+- moved plugin files in inc folder
+- Changed the plugin_uri into get_template_directory_uri
