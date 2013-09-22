@@ -29,3 +29,8 @@ Custom templates are created for:
 - single-project.php
 - content-project.php
 - inc/template-tags.php (updated)
+
+Isotope Plugin
+==============
+The isotopo plugin has been modified:
+- 
