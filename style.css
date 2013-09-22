@@ -805,6 +805,7 @@ body.full-width .site-footer {
   padding: 0.3rem 0.8rem;
   margin-bottom: 0;
   border: 0;
+  line-height: 40px;
 }
 .page-template-template-homepage-php ul#filters li a {
   text-transform: uppercase;
