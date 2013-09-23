@@ -34,4 +34,4 @@ Isotope Plugin
 ==============
 The isotope plugin has been modified:
 - moved plugin files in inc/isotope-posts folder and path to files accordingly
-- Changed the plugin_uri into get_template_directory_uri for functions: register_admin_scripts, isotope-posts-plugin-styles, register_plugin_scripts
+- Changed the plugin_uri into get_template_directory_uri for functions: register_admin_scripts, isotope-posts-plugin-styles, register_plugin_scripts 
