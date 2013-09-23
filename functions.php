@@ -115,6 +115,7 @@ add_action( 'wp_enqueue_scripts', 'agobenda_scripts' );
  */
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'homepage-thumb', 550, 9999 ); //(cropped)
+	add_image_size( 'widget-thumb', 300, 300, true ); //(cropped)
 }
 /**
  * Add support for shortcode in text widget

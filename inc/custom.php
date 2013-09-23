@@ -289,7 +289,7 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
         <ul class="posts-listing">
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
             <li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post_id ); ?></a>
+                <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post_id, 'widget-thumb' ); ?></a>
             </li>
             <?php endwhile;
             wp_reset_postdata(); ?>
