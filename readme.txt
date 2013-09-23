@@ -32,6 +32,6 @@ Custom templates are created for:
 
 Isotope Plugin
 ==============
-The isotopo plugin has been modified:
-- moved plugin files in inc folder
-- Changed the plugin_uri into get_template_directory_uri
+The isotope plugin has been modified:
+- moved plugin files in inc/isotope-posts folder and path to files accordingly
+- Changed the plugin_uri into get_template_directory_uri for functions: register_admin_scripts, isotope-posts-plugin-styles, register_plugin_scripts
