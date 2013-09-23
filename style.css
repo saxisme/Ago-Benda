@@ -800,8 +800,8 @@ body.full-width .site-footer {
 .page-template-template-homepage-php ul#filters li {
   float: none;
   display: inline-block;
-  padding: 3px 8px;
-  padding: 0rem 0rem;
+  padding: 0 0 18px 0;
+  padding: 0 0 1.8rem 0;
   margin-bottom: 0;
   margin-right: 18px;
   margin-right: 1.8rem;
