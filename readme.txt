@@ -16,6 +16,7 @@ Functions
 Moved the scripts inside a function for correct register
 - Files are located in inc folder and css in content.less
 - Jetpack Sharing: activated for project CPT and customized code in contet-project.php to move the default position
+- uncommented function for Custom Header and used it for site logo changing the position in the header.php
 
 Body Classes
 ------------
