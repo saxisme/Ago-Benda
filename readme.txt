@@ -12,8 +12,9 @@ The modification to the standard code is made in the respective less files
 Functions
 ---------
 - Custom functions and customisations are inside inc/custom.php
+- Custom nav for single project added in inc/template-tags.php
 - Custom function for "love" button: http://wp.tutsplus.com/tutorials/how-to-create-a-simple-post-rating-system-with-wordpress-and-jquery/
-Moved the scripts inside a function for correct register
+  Moved the scripts inside a function for correct register
 - Files are located in inc folder and css in content.less
 - Jetpack Sharing: activated for project CPT and customized code in contet-project.php to move the default position
 - uncommented function for Custom Header and used it for site logo changing the position in the header.php

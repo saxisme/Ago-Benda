@@ -48,7 +48,7 @@
 .site-content {
 	margin: 0 auto;
 	margin-top: 124px;
-	padding-top: 24px;
+	padding-top: 60px;
 }
 .site-main {
 	height: 100%;
@@ -90,6 +90,11 @@
 		float: right;
 		width: 75%;
 	}
+}
+.entry-title {
+	font-size: 19px;
+	font-size: 1.9rem;
+	font-weight: 400;
 }
 
 /*Rating Button*/
@@ -186,18 +191,22 @@ body.full-width {
 	.site-content-container {
 		width: 100%;
 	}
+	#options {
+		width: 90%;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
 	ul#filters {
 		width: 960px;
 		width: 100%;
 		text-align: center;
 		margin-left: 0;
-		margin-bottom: 22px;
+		margin-bottom:0px;
 
 		li {
 			float: none;
 			display: inline-block;
 			padding: 0 0 18px 0;
-			padding: 0 0 1.8rem 0;
 			margin-bottom: 0;
 			margin-right: 18px;
 			margin-right: 1.8rem;
@@ -206,9 +215,13 @@ body.full-width {
 
 			a {
 				text-transform: uppercase;
-				font-weight: 300;
+				font-size: 14px;
+				font-size: 1.4rem;
+				font-weight: 400;
 				color:@gray;
 				border: 1px solid @gray;
+				padding: 10px 13px;
+				padding: 10px 1.3rem;
 			}
 
 			a.selected, a:hover {
@@ -259,16 +272,76 @@ body.full-width {
 /*Projects - Single*/
 body.single-project {
 	.post-navigation {
-		text-align: center;
-		width: 150px;
-		margin: 0 auto;
-		margin-top: 36px;
-		margin-bottom: 60px;
-		
-		.nav-previous, .nav-next, .nav-all {
-			width: 50px;
-			float: left;
+		//text-align: center;
+		//width: 350px;
+		//margin: 0 auto;
+		//margin-top: 0px;
+		margin-bottom: 42px;
+			ul#filters {
+			width: 960px;
+			width: 100%;
 			text-align: center;
+			margin-left: 0;
+			margin-bottom:0px;
+
+			li {
+				float: none;
+				display: inline-block;
+				padding: 0 0 18px 0;
+				margin-bottom: 0;
+				margin-right: 18px;
+				margin-right: 1.8rem;
+				border:0;
+				line-height: 37px;
+				width: auto;
+
+				a {
+					text-transform: uppercase;
+					font-size: 14px;
+					font-size: 1.4rem;
+					font-weight: 400;
+					color:@gray;
+					border: 1px solid @gray;
+					padding: 10px 13px;
+					padding: 10px 1.3rem;
+				}
+
+				a.selected, a:hover {
+						color:@graydark;
+						border: 1px solid @graydark;
+					}
+			}
+			
+			.nav-previous a, .nav-next a, .nav-all a {
+				//float: left;
+				// text-align: center;
+				// text-transform: uppercase;
+				// font-size: 14px;
+				// font-size: 1.4rem;
+				// font-weight: 400;
+				// color:@gray;
+				// border: 1px solid @gray;
+				// padding: 10px 13px;
+				// padding: 10px 1.3rem;
+
+			}
+			.nav-previous, .nav-next, .nav-all {
+				// display: inline-block;
+				// float: none;
+				// width: auto;
+				// padding: 0;
+				// margin-bottom: 0;
+				// margin-right: 18px;
+				// margin-right: 1.8rem;
+				// border: 0;
+				//line-height: 37px;
+			}
+			.nav-all {
+				//width: 150px;
+			}
+			.nav-previous, .nav-next{
+				//width: 50px;
+			}
 		}
 	}
 	.post-container {
@@ -287,6 +360,9 @@ body.single-project {
 	.project-details {
 			list-style: none;
 			margin-left: 0;
+	}
+	.project-detail {
+		color:@black;
 	}
 }
 

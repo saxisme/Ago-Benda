@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php if ( is_archive() || is_search() ) : // Meta data on the left for archive and search pages ?>
+<?php if ( is_archive() || is_search() ) { // Meta data on the left for archive and search pages ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-meta entry-meta-top">
 		<?php agobenda_posted_on(); ?>
@@ -18,7 +18,7 @@
 	</div><!-- .entry-meta -->
 
 	<div class="entry-container clear">
-		<header class="entry-header test2">
+		<header class="entry-header test3">
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		</header><!-- .entry-header -->	
 
@@ -63,11 +63,11 @@
 		<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
-<? else : ?>
+<? } else { ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header test2">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+	<header class="entry-header">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -117,4 +117,4 @@
 		<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
-<?php endif; ?>
+<?php } ?>

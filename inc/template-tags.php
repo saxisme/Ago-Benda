@@ -36,9 +36,11 @@ function agobenda_content_nav( $nav_id ) {
 
 	<?php if ( is_singular( 'project' ) ) : // navigation links for single project posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '<i class="icon-angle-left"></i>', 'Previous post link', 'agobenda' ) . '</span>' ); ?>
-		<div class="nav-all"><i class="icon-th"></i></div>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '<span class="meta-nav">' . _x( '<i class="icon-angle-right"></i>', 'Next post link', 'agobenda' ) . '</span>' ); ?>
+		<ul id="filters" class="option-set clear">
+			<?php previous_post_link( '<li class="nav-previous">%link', '<span class="meta-nav">' . _x( '<i class="icon-angle-left"></i>', 'Previous post link', 'agobenda' ) . '</span></li>' ); ?>
+			<li class="nav-all"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Back to Works</a></li>
+			<?php next_post_link( '<li class="nav-next">%link', '<span class="meta-nav">' . _x( '<i class="icon-angle-right"></i>', 'Next post link', 'agobenda' ) . '</span></li>' ); ?>
+		</ul>
 
 	<?php elseif ( is_single() ) : // navigation links for single posts ?>
 
