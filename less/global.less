@@ -19,7 +19,6 @@ textarea {
 	font-family: @font-lato;
 	font-weight: 300;
 }
-
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
@@ -165,6 +164,7 @@ button,
 input,
 select,
 textarea {
+	background-color: @graylight;
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
@@ -178,26 +178,30 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid #ccc;
-	border-color: #ccc #ccc #bbb #ccc;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
+	color: @white;
+	text-transform: uppercase;
+	border: 1px solid @gray;
+	//border-color: #ccc #ccc #bbb #ccc;
+	//border-radius: 3px;
+	background: @black;
+	//box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	//color: rgba(0, 0, 0, .8);
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	font-size: 12px;
-	font-size: 1.2rem;
+	//font-size: 12px;
+	//font-size: 1.2rem;
 	line-height: 1;
-	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+	padding: .6em 1em .6em;
+	//text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa #bbb;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	background-color: lighten(@graydark, 2%);
+	//color: @graydark;
+	//border-color: #ccc #bbb #aaa #bbb;
+	//box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 button:focus,
 html input[type="button"]:focus,
@@ -236,7 +240,7 @@ input[type="search"],
 textarea {
 	color: #666;
 	border: 1px solid #ccc;
-	border-radius: 3px;
+	//border-radius: 3px;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -244,12 +248,16 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	color: #111;
+	-webkit-box-shadow: 0 0 12px rgb(57, 57, 57, 0.5);
+    -moz-box-shadow: 0 0 12px rgb(57, 57, 57, 0.5);
+    box-shadow: 0 0 12px rgb(57, 57, 57, 0.5);
+    outline: none;
 }
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+	padding: 10px;
 }
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */

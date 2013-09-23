@@ -103,16 +103,45 @@
 	margin-bottom: 24px;
 }
 
+/*Gallery*/
+.gallery {
+	img {
+		border: 1px solid @graydark!important;
+	}
+	.gallery-caption {
+		font-size: 11px;
+		font-size: 1.1rem;
+	}
+}
+
 /*Contact Form*/
-.contact-form {
+body .contact-form {
 	label{
 		font-weight: 400;
+		display: none;
 		span {
 			font-weight: 300;
 		}
 	}
+	input[type='text'], input[type='email'] {
+		width:40%;
+		margin-bottom: 24px;
+	}
+	input.url {
+		width:60%;
+	}
+	.contact-submit {
+		float: right;
+		margin-right: 19%;
+	}
 }
 
+/*Comments Area*/
+.comments-area {
+	code {
+		font-weight: 12px;
+	}
+}
 /*Call Me*/
 .callme-container {
 
@@ -152,6 +181,9 @@
 .widget-area {
 	.widget ul > li {
 		list-style: none;
+	}
+	.widget > ul {
+		margin-left: 0;
 	}
 	.posts-listing {
 		margin-left: 0;
