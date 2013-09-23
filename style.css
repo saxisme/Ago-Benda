@@ -849,10 +849,10 @@ body.full-width .site-footer {
 }
 .page-template-template-homepage-php .iso-thumb a img:hover {
   opacity: 0.2;
-  -webkit-transform: scale(2.5);
-  -moz-transform: scale(2.5);
-  -o-transform: scale(2.5);
-  transform: scale(2.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
 }
 /*Projects - Single*/
 body.single-project .post-navigation {
