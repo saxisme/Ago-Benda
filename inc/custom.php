@@ -299,3 +299,14 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
         return $myvariable;
     }
 }
+
+/**
+ * Add shortcode for displaying Call Me call to action
+ * http://codex.wordpress.org/Function_Reference/add_shortcode
+ * http://diythemes.com/thesis/wordpress-shortcodes/
+ **/
+function sax_callme( $atts, $content="" ) {
+	extract(shortcode_atts(array('text' => 'Call'), $atts));
+     return '<div class="callme-container"><div class="callme"><span class="callme-icon"><i class="icon-phone icon-3x"></i></span><span class="callme-title">' . $text . '</span><span class="callme-content">' . do_shortcode($content) . '</span></div></div>';
+}
+add_shortcode( 'callme', 'sax_callme' );

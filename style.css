@@ -687,7 +687,9 @@ textarea:focus,
 .group-blog .byline {
   display: inline;
 }
-.entry-content,
+.entry-content {
+  margin: 0;
+}
 .entry-summary {
   margin: 1.5em 0 0;
 }
@@ -714,6 +716,7 @@ textarea:focus,
   font-size: 1.9rem;
   font-weight: 400;
   margin-top: 0;
+  margin-bottom: 24px;
 }
 /*Contact Form*/
 .contact-form label {
@@ -721,6 +724,35 @@ textarea:focus,
 }
 .contact-form label span {
   font-weight: 300;
+}
+/*Call Me*/
+.callme {
+  width: 200px;
+  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #393939;
+  color: #fbfbfb;
+  text-align: center;
+  margin: 0 auto;
+}
+.callme span {
+  display: block;
+}
+.callme .callme-icon {
+  padding-top: 25px;
+  padding-bottom: 12px;
+}
+.callme .callme-title {
+  font-weight: 300;
+  font-size: 20px;
+}
+.callme .callme-content {
+  font-size: 22px;
+  font-weight: 400;
 }
 /*Widget Area*/
 .widget-area .widget ul > li {
