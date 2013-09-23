@@ -18,6 +18,13 @@ Functions
 - Files are located in inc folder and css in content.less
 - Jetpack Sharing: activated for project CPT and customized code in contet-project.php to move the default position
 - uncommented function for Custom Header and used it for site logo changing the position in the header.php
+- Added shortcode for post listing - supported also in text widget.
+  Parameters: 
+  	'type' => 'post'
+    'order' => 'date'
+    'orderby' => 'title'
+    'posts' => -1
+    'category' => ''
 
 Body Classes
 ------------

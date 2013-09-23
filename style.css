@@ -713,6 +713,10 @@ textarea:focus,
   font-weight: 400;
   margin-top: 0;
 }
+/*Widget Area*/
+.widget-area .posts-listing {
+  margin-left: 0;
+}
 /*Rating Button*/
 article .entry-meta-top .post-like {
   margin-top: 1em;

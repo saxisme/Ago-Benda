@@ -117,6 +117,10 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'homepage-thumb', 550, 9999 ); //(cropped)
 }
 /**
+ * Add support for shortcode in text widget
+ */
+add_filter('widget_text', 'do_shortcode');
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

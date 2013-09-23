@@ -252,3 +252,50 @@ function lc_infinite_scroll_credit(){
  return $content;
 }
 /** End JetPack **/
+
+/**
+ * Add shortcode for displaying Projects
+ * http://wp.tutsplus.com/tutorials/plugins/create-a-shortcode-to-list-posts-with-multiple-parameters/
+ **/
+// create shortcode with parameters so that the user can define what's queried - default is to list all blog posts
+add_shortcode( 'list-posts', 'rmcc_post_listing_parameters_shortcode' );
+function rmcc_post_listing_parameters_shortcode( $atts ) {
+    ob_start();
+ 
+    // define attributes and their defaults
+    extract( shortcode_atts( array (
+        'type' => 'post',
+        'order' => 'date',
+        'orderby' => 'title',
+        'posts' => -1,
+        'color' => '',
+        'fabric' => '',
+        'category' => '',
+    ), $atts ) );
+ 
+    // define query parameters based on attributes
+    $options = array(
+        'post_type' => $type,
+        'order' => $order,
+        'orderby' => $orderby,
+        'posts_per_page' => $posts,
+        'color' => $color,
+        'fabric' => $fabric,
+        'category_name' => $category,
+    );
+    $query = new WP_Query( $options );
+    // run the loop based on the query
+    if ( $query->have_posts() ) { ?>
+        <ul class="posts-listing">
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+            <li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post_id, 'homepage-thumb' ); ?></a>
+            </li>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
+        </ul>
+    <?php
+        $myvariable = ob_get_clean();
+        return $myvariable;
+    }
+}
