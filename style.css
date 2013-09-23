@@ -553,7 +553,7 @@ textarea:focus,
   display: block;
   float: right;
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   font-size: 1.8rem;
   margin-top: 24px;
@@ -801,14 +801,16 @@ body.full-width .site-footer {
   float: none;
   display: inline-block;
   padding: 3px 8px;
-  padding: 0.3rem 0.8rem;
+  padding: 0rem 0rem;
   margin-bottom: 0;
+  margin-right: 18px;
+  margin-right: 1.8rem;
   border: 0;
-  line-height: 40px;
+  line-height: 37px;
 }
 .page-template-template-homepage-php ul#filters li a {
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 300;
   color: #9e9e9e;
   border: 1px solid #9e9e9e;
 }
