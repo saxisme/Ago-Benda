@@ -19,6 +19,7 @@
 	z-index:999;
 }
 .site-header-container, .site-footer-container {
+	max-width: 1240px;
 	width: 90%;
 	margin: 0 auto;
 }
@@ -42,6 +43,7 @@
 	display: none;
 }
 .site-content-container {
+	max-width: 1240px;
 	width: 90%;
 	margin: 0 auto;
 }
@@ -97,13 +99,31 @@
 	font-weight: 400;
 	margin-top: 0;
 }
+
+/*Contact Form*/
+.contact-form {
+	label{
+		font-weight: 400;
+		span {
+			font-weight: 300;
+		}
+	}
+}
+
 /*Widget Area*/
 .widget-area {
+	.widget ul > li {
+		list-style: none;
+	}
 	.posts-listing {
 		margin-left: 0;
 	}
 }
 
+/*Footer*/
+.site-footer-container {
+	text-align: center;
+}
 
 /*Rating Button*/
 article .entry-meta-top .post-like { 
@@ -137,62 +157,7 @@ article .entry-meta-top .post-like .alreadyvoted{
 	background-position:-32px 0 
 }
 
-/*Widgets*/
-.widget ul > li {
-	list-style: none;
-}
 
-/*Footer*/
-.site-footer-container {
-	text-align: center;
-}
-
-/*
-Theme Name: AgoBenda
-Layout: Content-Sidebar
-*/
-
-.content-area {
-	float: left;
-	margin: 0 -26.47058823529412% 0 0;
-	width: 100%;
-}
-.site-main {
-	margin: 0 26.47058823529412% 0 0;
-	padding-right: 48px;
-}
-.site-content .widget-area {
-	float: right;
-	overflow: hidden;
-	width: 26.47058823529412%;
-}
-.site-footer {
-	clear: both;
-	width: 100%;
-}
-
-/*
-Theme Name: AgoBenda
-Layout: Full-Width
-*/
-body.full-width {
-	.site-content-container {
-		width: 100%;
-	}
-	.content-area {
-		float: none;
-		margin: 0 auto;
-		width: 90%;
-	}
-	.site-main {
-		margin: 0 auto;
-		padding-right: 0;
-	}
-	.site-footer {
-		clear: both;
-		width: 100%;
-	}
-}
 
 /*Homepage Projects*/
 .page-template-template-homepage-php {
@@ -379,5 +344,50 @@ body div.sharedaddy div.sd-block {
 	border-top: 0;
 	.sd-content {
 		float: none;
+	}
+}
+
+/*
+Layout: Content-Sidebar
+*/
+
+.content-area {
+	float: left;
+	margin: 0 -26.47058823529412% 0 0;
+	width: 100%;
+}
+.site-main {
+	margin: 0 26.47058823529412% 0 0;
+	padding-right: 48px;
+}
+.site-content .widget-area {
+	float: right;
+	overflow: hidden;
+	width: 26.47058823529412%;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+
+/*
+Layout: Full-Width
+*/
+body.full-width {
+	.site-content-container {
+		width: 100%;
+	}
+	.content-area {
+		float: none;
+		margin: 0 auto;
+		width: 90%;
+	}
+	.site-main {
+		margin: 0 auto;
+		padding-right: 0;
+	}
+	.site-footer {
+		clear: both;
+		width: 100%;
 	}
 }
