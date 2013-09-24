@@ -170,7 +170,7 @@ button,
 input,
 select,
 textarea {
-	background-color: @white;
+	background-color: darken(@white, 3%);
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
@@ -358,16 +358,16 @@ textarea:focus,
 /* Clearing */
 .clear:before,
 .clear:after,
-[class*="content"]:before,
-[class*="content"]:after,
-[class*="site"]:before,
-[class*="site"]:after{
+[class^="content"]:before,
+[class^="content"]:after,
+[class^="site"]:before,
+[class^="site"]:after{
 	content: '';
 	display: table;
 }
 
 .clear:after,
-[class*="content"]:after,
-[class*="site"]:after {
+[class^="content"]:after,
+[class^="site"]:after {
 	clear: both;
 }

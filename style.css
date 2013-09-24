@@ -340,7 +340,7 @@ button,
 input,
 select,
 textarea {
-  background-color: #fbfbfb;
+  background-color: #f3f3f3;
   font-size: 100%;
   /* Corrects font size not being inherited in all browsers */
 
@@ -538,16 +538,16 @@ textarea:focus,
 /* Clearing */
 .clear:before,
 .clear:after,
-[class*="content"]:before,
-[class*="content"]:after,
-[class*="site"]:before,
-[class*="site"]:after {
+[class^="content"]:before,
+[class^="content"]:after,
+[class^="site"]:before,
+[class^="site"]:after {
   content: '';
   display: table;
 }
 .clear:after,
-[class*="content"]:after,
-[class*="site"]:after {
+[class^="content"]:after,
+[class^="site"]:after {
   clear: both;
 }
 /* =Menu
