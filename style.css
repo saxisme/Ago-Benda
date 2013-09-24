@@ -339,7 +339,7 @@ button,
 input,
 select,
 textarea {
-  background-color: #eceef2;
+  background-color: #fbfbfb;
   font-size: 100%;
   /* Corrects font size not being inherited in all browsers */
 
@@ -365,7 +365,7 @@ input[type="reset"],
 input[type="submit"] {
   color: #fbfbfb;
   text-transform: uppercase;
-  border: 1px solid #9e9e9e;
+  border: 0;
   background: #393939;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -430,7 +430,7 @@ input[type="password"],
 input[type="search"],
 textarea {
   color: #666;
-  border: 1px solid #ccc;
+  border: 0;
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
