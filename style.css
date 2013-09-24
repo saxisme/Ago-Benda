@@ -1012,9 +1012,56 @@ body.full-width .site-footer {
   clear: both;
   width: 100%;
 }
+@media only screen and (max-width: 673px) {
+  #iso-loop {
+    max-width: 607px;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  #iso-loop {
+    max-width: 927px;
+  }
+  ul#filters {
+    width: 960px;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0px;
+  }
+  ul#filters li {
+    float: none;
+    display: inline-block;
+    padding: 0 0 18px 0;
+    margin-bottom: 0;
+    margin-right: 18px;
+    margin-right: 1.8rem;
+    border: 0;
+    line-height: 37px;
+  }
+  ul#filters li a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #9e9e9e;
+    border: 1px solid #9e9e9e;
+    padding: 10px 13px;
+    padding: 10px 1.3rem;
+  }
+  ul#filters li a.selected,
+  ul#filters li a:hover {
+    color: #66696d;
+    border: 1px solid #66696d;
+  }
+}
 @media only screen and (max-width: 1403px) {
   #iso-loop {
     max-width: 927px;
+  }
+}
+@media only screen and (min-width: 1404px) {
+  #iso-loop {
+    max-width: 1265px;
   }
 }
 /* =Asides
