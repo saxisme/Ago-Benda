@@ -1016,14 +1016,14 @@ body.full-width .site-footer {
   #iso-loop {
     max-width: 607px;
   }
-  ul#filters {
+  .page-template-template-homepage-php ul#filters {
     width: 960px;
     width: 100%;
     text-align: center;
     margin-left: 0;
     margin-bottom: 0px;
   }
-  ul#filters li {
+  .page-template-template-homepage-php ul#filters li {
     float: none;
     display: inline-block;
     padding: 0 0 18px 0;
@@ -1033,7 +1033,7 @@ body.full-width .site-footer {
     border: 0;
     line-height: 37px;
   }
-  ul#filters li a {
+  .page-template-template-homepage-php ul#filters li a {
     text-transform: uppercase;
     font-size: 12px;
     font-size: 1.2rem;
@@ -1043,8 +1043,8 @@ body.full-width .site-footer {
     padding: 10px 13px;
     padding: 10px 1.3rem;
   }
-  ul#filters li a.selected,
-  ul#filters li a:hover {
+  .page-template-template-homepage-php ul#filters li a.selected,
+  .page-template-template-homepage-php ul#filters li a:hover {
     color: #66696d;
     border: 1px solid #66696d;
   }
