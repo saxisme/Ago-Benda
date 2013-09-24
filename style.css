@@ -1280,6 +1280,3 @@ Home Masonry
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* For landscape layouts only */
 }
-@media only screen and (min-device-width: 1281px) {
-  /* For large screens */
-}
