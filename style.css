@@ -776,7 +776,10 @@ body .contact-form input[type='email'] {
   margin-bottom: 24px;
 }
 body .contact-form input.url {
-  width: 60%;
+  width: 100%;
+}
+body .contact-form .contact-form textarea {
+  width: 100%;
 }
 body .contact-form .contact-submit {
   float: right;
