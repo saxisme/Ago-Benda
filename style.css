@@ -1022,6 +1022,8 @@ body.full-width .site-footer {
     padding: 0 20px 20px 0;
     max-width: 657px;
     max-width: 100%;
+    position: relative!important;
+    display: inline-block;
   }
   .page-template-template-homepage-php ul#filters li {
     float: none;
