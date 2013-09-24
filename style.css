@@ -1016,6 +1016,11 @@ body.full-width .site-footer {
   #iso-loop {
     max-width: 607px;
   }
+  .page-template-template-homepage-php #options {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
   .page-template-template-homepage-php ul#filters {
     width: 960px;
     width: 100%;
