@@ -926,7 +926,6 @@ body.single-project .post-navigation ul#filters li {
   padding: 0 0 18px 0;
   margin-bottom: 0;
   margin-right: 18px;
-  margin-right: 1.8rem;
   border: 0;
   line-height: 37px;
   width: auto;
@@ -1031,10 +1030,8 @@ body.full-width .site-footer {
   .page-template-template-homepage-php ul#filters li {
     float: none;
     display: inline-block;
-    padding: 0 0 18px 0;
-    margin-bottom: 0;
-    margin-right: 18px;
-    margin-right: 1.8rem;
+    padding: 0 0 13px 0;
+    margin-right: 14px;
     border: 0;
     line-height: 37px;
   }
