@@ -167,10 +167,16 @@ function cmb_initialize_cmb_meta_boxes() {
 
 	if ( ! class_exists( 'cmb_Meta_Box' ) )
 		require_once 'lib/metabox/init.php';
-
 }
 
 /**
  * Load rating button files.
  */
 require get_template_directory() . '/inc/rating-button/functions.php';
+
+// Replaces the excerpt "more" text by a link
+function sax_new_excerpt_more($more) {
+       global $post;
+	return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Continue reading...</a>';
+}
+add_filter('excerpt_more', 'sax_new_excerpt_more');
