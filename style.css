@@ -1015,13 +1015,13 @@ body.full-width .site-footer {
 }
 @media only screen and (max-width: 687px) {
   .page-template-template-homepage-php ul#iso-loop {
-    max-width: 100%;
+    max-width: 605px;
   }
   .page-template-template-homepage-php ul#iso-loop li {
     margin: 0 auto;
     margin-left: 20px;
     padding: 0 20px 20px 0;
-    max-width: 46.5288035450517%;
+    max-width: 46.69421487603306%;
   }
   .page-template-template-homepage-php ul#filters li {
     float: none;
