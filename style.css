@@ -1247,6 +1247,15 @@ Layout
 Home Masonry
 */
 @media only screen and (max-width: 768px) {
+  .site-header {
+    height: 120px;
+  }
+  .site-content {
+    margin-top: 120px;
+  }
+  .site-branding {
+    width: 140px;
+  }
   .single-post .entry-meta-top,
   .blog .entry-meta-top,
   .archive .entry-meta-top,
@@ -1267,10 +1276,16 @@ Home Masonry
     padding: 0;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1023px) {
+@media only screen and (min-width: 769px) {
+  .site-branding {
+    width: 190px;
+  }
   .site-content .widget-area {
     max-width: 300px;
   }
+}
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  
 }
 @media only screen and (min-width: 1024px) {
   /* For default screens */
