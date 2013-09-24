@@ -12,6 +12,7 @@ button,
 input,
 select,
 textarea {
+	color:@gray;
 	font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5;
@@ -254,8 +255,11 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
 	color: #111;
-	-webkit-box-shadow: 0 0 12px rgb(57, 57, 57, 0.5);
-    -moz-box-shadow: 0 0 12px rgb(57, 57, 57, 0.5);
+	border: 1px solid @graylight;
+	box-shadow: none;
+	outline: none;
+	//-webkit-box-shadow: 0 0 12px rgb(57, 57, 57, 0.5);
+    //-moz-box-shadow: 0 0 12px rgb(57, 57, 57, 0.5);
     //box-shadow: 0 0 12px rgb(57, 57, 57, 0.5);
     //outline: none;
 }
