@@ -83,6 +83,9 @@
 }
 .entry-meta {
 	color:@gray;
+	.posted-on, .tags-links {
+		display: block;
+	}
 }
 .single-post, 
 .blog,
@@ -95,6 +98,9 @@
 		float: right;
 		width: 75%;
 	}
+}
+.blog .page-title {
+	display: none;
 }
 .entry-title, .widget-title {
 	font-size: 19px;
@@ -285,7 +291,7 @@ article .entry-meta-top .post-like .alreadyvoted{
 			max-width:31.25%;
 		}
 		li:nth-child(3n) {
-			padding-right:0; 
+			//padding-right:0; 
 		}
  	}
  	.iso-thumb {

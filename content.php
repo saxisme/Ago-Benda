@@ -4,10 +4,19 @@
  */
 ?>
 
-<?php if ( is_archive() || is_search() || is_page('blog') || is_page('703') ) { // Meta data on the left for archive and search pages ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class('side-meta'); ?>>
+<?php if ( is_archive() || is_search() || is_home() ) { // Meta data on the left for archive and search pages ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('side-meta clear'); ?>>
 	<div class="entry-meta entry-meta-top">
 		<?php agobenda_posted_on(); ?>
+		<?php
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( '', __( ', ', 'agobenda' ) );
+				if ( $tags_list ) :
+			?>
+			<span class="tags-links">
+				<?php printf( __( 'Tagged %1$s', 'agobenda' ), $tags_list ); ?>
+			</span>
+			<?php endif; // End if $tags_list ?>
 		<?php
 			$key_1_value = get_post_meta( get_the_ID(), 'votes_count', true );
 			// check if the custom field has a value
@@ -18,19 +27,19 @@
 	</div><!-- .entry-meta -->
 
 	<div class="entry-container clear">
-		<header class="entry-header test3">
+		<header class="entry-header">
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 		</header><!-- .entry-header -->	
 
 		<div class="entry-thumb">
-			<?php the_post_thumbnail('homepage-thumb'); ?>
+			<?php //the_post_thumbnail('homepage-thumb'); ?>
 		</div><!-- .entry-thumb -->
 
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 
-	</div><!-- entry-container -->
+	
 	<div style="clear:both"></div>
 
 	<footer class="entry-meta">
@@ -45,15 +54,7 @@
 			</span>
 			<?php endif; // End if categories ?>
 
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'agobenda' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'agobenda' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
+			
 		<?php endif; // End if 'post' == get_post_type() ?>
 
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
@@ -62,10 +63,11 @@
 
 		<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
+	</div><!-- entry-container -->
 </article><!-- #post-## -->
 <? } else { ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
