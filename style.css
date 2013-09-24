@@ -1021,7 +1021,7 @@ body.full-width .site-footer {
     max-width: 927px;
   }
   .page-template-template-homepage-php ul#iso-loop li {
-    margin: 0;
+    margin: 0 auto;
     padding-right: 0;
     max-width: 100%;
   }
