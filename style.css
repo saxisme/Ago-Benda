@@ -164,12 +164,17 @@ button,
 input,
 select,
 textarea {
-  color: #66696d;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.5;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
+}
+button,
+input,
+select,
+textarea {
+  color: #fbfbfb;
 }
 /* Headings */
 h1,
@@ -435,8 +440,6 @@ textarea:focus {
   color: #111;
   -webkit-box-shadow: 0 0 12px #393939;
   -moz-box-shadow: 0 0 12px #393939;
-  box-shadow: 0 0 12px #393939;
-  outline: none;
 }
 input[type="text"],
 input[type="email"],
