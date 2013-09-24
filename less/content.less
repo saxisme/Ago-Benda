@@ -480,45 +480,20 @@ body.full-width {
 	#iso-loop {
 	max-width: 927px;
 	}
-	.page-template-template-homepage-php #options {
-		width: 95%;
-		margin: 0 auto;
-		margin-bottom: 40px;
-	}
-	.page-template-template-homepage-php {
-		ul#filters {
-			width: 960px;
-			width: 100%;
-			text-align: center;
-			margin-left: 0;
-			margin-bottom:0px;
-
-			li {
-				float: none;
-				display: inline-block;
-				padding: 0 0 13px 0;
-				margin-right: 14px;
-				border:0;
-				line-height: 37px;
-
-				a {
-					text-transform: uppercase;
-					font-size: 12px;
-					font-size: 1.2rem;
-					font-weight: 400;
-					color:@gray;
-					border: 1px solid @gray;
-					padding: 10px 13px;
-					padding: 10px 1.3rem;
-				}
-
-				a.selected, a:hover {
-						color:@graydark;
-						border: 1px solid @graydark;
-					}
-			}
+	ul#iso-loop {
+	 	li {
+			margin: 0;
+			//padding: 0 20px 20px 0;
+			//padding: 0 2.08333333333333% 2.08333333333333% 0;
+			//max-width: 300px;
+			padding-right: 0; 
+			max-width:100%;
 		}
-	}
+		li:nth-child(3n) {
+			//padding-right:0; 
+		}
+ 	}
+
 }
 @media only screen and (max-width: 1403px){
 	#iso-loop {

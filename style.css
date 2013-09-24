@@ -1020,40 +1020,10 @@ body.full-width .site-footer {
   #iso-loop {
     max-width: 927px;
   }
-  .page-template-template-homepage-php #options {
-    width: 95%;
-    margin: 0 auto;
-    margin-bottom: 40px;
-  }
-  .page-template-template-homepage-php ul#filters {
-    width: 960px;
-    width: 100%;
-    text-align: center;
-    margin-left: 0;
-    margin-bottom: 0px;
-  }
-  .page-template-template-homepage-php ul#filters li {
-    float: none;
-    display: inline-block;
-    padding: 0 0 13px 0;
-    margin-right: 14px;
-    border: 0;
-    line-height: 37px;
-  }
-  .page-template-template-homepage-php ul#filters li a {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #9e9e9e;
-    border: 1px solid #9e9e9e;
-    padding: 10px 13px;
-    padding: 10px 1.3rem;
-  }
-  .page-template-template-homepage-php ul#filters li a.selected,
-  .page-template-template-homepage-php ul#filters li a:hover {
-    color: #66696d;
-    border: 1px solid #66696d;
+  ul#iso-loop li {
+    margin: 0;
+    padding-right: 0;
+    max-width: 100%;
   }
 }
 @media only screen and (max-width: 1403px) {
