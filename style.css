@@ -1019,9 +1019,9 @@ body.full-width .site-footer {
   }
   .page-template-template-homepage-php ul#iso-loop li {
     margin: 0 auto;
-    padding: 0 0 20px 0;
-    max-width: 677px;
-    max-width: 100%;
+    padding: 0 20px 20px 0;
+    max-width: 657px;
+    max-width: 46.5288035450517%;
   }
   .page-template-template-homepage-php ul#filters li {
     float: none;
