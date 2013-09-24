@@ -783,6 +783,7 @@ body .contact-form textarea {
 }
 body .contact-form .contact-submit {
   float: right;
+  margin-right: -5px;
 }
 /*Comments Area*/
 .comments-area code {
