@@ -536,18 +536,34 @@ textarea:focus,
 
 }
 /* Clearing */
+/* Clearing */
 .clear:before,
 .clear:after,
-[class^="content"]:before,
-[class^="content"]:after,
-[class^="site"]:before,
-[class^="site"]:after {
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-main:before,
+.site-main:after,
+.site-content-container:before,
+.site-content-container:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
   content: '';
   display: table;
 }
 .clear:after,
-[class^="content"]:after,
-[class^="site"]:after {
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-main:after,
+.site-content-container:after,
+.site-content:after,
+.site-footer:after {
   clear: both;
 }
 /* =Menu
@@ -819,6 +835,30 @@ body .contact-form .contact-submit {
 .widget-area .posts-listing {
   margin-left: 0;
 }
+.widget-area .posts-listing .iso-thumb {
+  position: relative;
+  /* IMAGE HOVER ANIMATIONS */
+
+  background: url(images/post-thumb.png) no-repeat center;
+  overflow: hidden;
+  background-color: #393939 !important;
+  padding: 0;
+  margin: 0;
+}
+.widget-area .posts-listing .iso-thumb a img {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.widget-area .posts-listing .iso-thumb a img:hover {
+  opacity: 0.2;
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
 /*Footer*/
 .site-footer {
   margin-top: 30px;
@@ -1007,6 +1047,7 @@ Layout: Content-Sidebar
 .site-main {
   margin: 0 26.47058823529412% 0 0;
   padding-right: 48px;
+  display: block;
 }
 .site-content .widget-area {
   float: right;

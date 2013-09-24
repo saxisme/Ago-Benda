@@ -203,6 +203,29 @@ margin-bottom: 40px;
 	}
 	.posts-listing {
 		margin-left: 0;
+		.iso-thumb {
+	 		position: relative;
+			/* IMAGE HOVER ANIMATIONS */
+			background: url(images/post-thumb.png) no-repeat center;
+			overflow: hidden;
+			background-color: @black!important;
+			padding: 0;
+			margin: 0;
+	 	}
+	 	.iso-thumb a img{
+	 		-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition:    all 0.3s ease-in-out;
+			-ms-transition:     all 0.3s ease-in-out;
+			-o-transition:      all 0.3s ease-in-out;
+			transition:         all 0.3s ease-in-out;
+	 	}
+	 	.iso-thumb a img:hover {
+	 		opacity: 0.2;
+			-webkit-transform:scale(1.5);
+			   -moz-transform:scale(1.5);
+			     -o-transform:scale(1.5);
+				    transform:scale(1.5);
+	 	}
 	}
 }
 
@@ -447,6 +470,7 @@ Layout: Content-Sidebar
 .site-main {
 	margin: 0 26.47058823529412% 0 0;
 	padding-right: 48px;
+	display: block;
 }
 .site-content .widget-area {
 	float: right;
