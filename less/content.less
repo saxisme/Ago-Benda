@@ -11,8 +11,8 @@
 	width:100%;
 }
 .site-header {
-	height: 124px;
-	background-color: @white;
+	height: 150px;
+	background-color: fade(@white, 98%);
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -24,7 +24,7 @@
 	margin: 0 auto;
 }
 .site-branding {
-	margin: 12px 0;
+	margin: 28px 0;
 	width: 190px;
 	width: 19.791666666667%;
 	height: 124px;
@@ -49,7 +49,7 @@
 }
 .site-content {
 	margin: 0 auto;
-	margin-top: 124px;
+	margin-top: 150px;
 	padding-top: 60px;
 }
 .site-main {
@@ -70,6 +70,9 @@
 .single .byline,
 .group-blog .byline {
 	display: inline;
+}
+.entry-title, .entry-title a {
+	color:@black;
 }
 .entry-content {
 	margin: 0;
@@ -151,7 +154,7 @@ body .contact-form {
 }
 /*Call Me*/
 .callme-container {
-
+margin-bottom: 40px;
 }
 .callme {
 	width: 200px;
@@ -186,8 +189,14 @@ body .contact-form {
 
 /*Widget Area*/
 .widget-area {
+	font-weight: 400;
+	.widget-title {
+		color: @black;
+	}
 	.widget ul > li {
 		list-style: none;
+		padding-bottom: 5px;
+		line-height: 120%;
 	}
 	.widget > ul {
 		margin-left: 0;
@@ -198,6 +207,9 @@ body .contact-form {
 }
 
 /*Footer*/
+.site-footer {
+	margin-top: 30px;
+}
 .site-footer-container {
 	text-align: center;
 }
@@ -299,7 +311,7 @@ article .entry-meta-top .post-like .alreadyvoted{
 		/* IMAGE HOVER ANIMATIONS */
 		background: url(images/post-thumb.png) no-repeat center;
 		overflow: hidden;
-		background-color: @graydark!important;
+		background-color: @black!important;
 		padding: 0;
 		margin: 0;
  	}

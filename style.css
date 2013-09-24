@@ -554,7 +554,7 @@ textarea:focus,
   font-weight: 300;
   font-size: 18px;
   font-size: 1.8rem;
-  margin-top: 46px;
+  margin-top: 60px;
   text-transform: uppercase;
 }
 .navigation-main ul {
@@ -628,8 +628,8 @@ textarea:focus,
   width: 100%;
 }
 .site-header {
-  height: 124px;
-  background-color: #fbfbfb;
+  height: 150px;
+  background-color: rgba(251, 251, 251, 0.98);
   width: 100%;
   position: fixed;
   top: 0;
@@ -642,7 +642,7 @@ textarea:focus,
   margin: 0 auto;
 }
 .site-branding {
-  margin: 12px 0;
+  margin: 28px 0;
   width: 190px;
   width: 19.791666666667%;
   height: 124px;
@@ -665,7 +665,7 @@ textarea:focus,
 }
 .site-content {
   margin: 0 auto;
-  margin-top: 124px;
+  margin-top: 150px;
   padding-top: 60px;
 }
 .site-main {
@@ -684,6 +684,10 @@ textarea:focus,
 .single .byline,
 .group-blog .byline {
   display: inline;
+}
+.entry-title,
+.entry-title a {
+  color: #393939;
 }
 .entry-content {
   margin: 0;
@@ -761,6 +765,9 @@ body .contact-form .contact-submit {
   font-weight: 12px;
 }
 /*Call Me*/
+.callme-container {
+  margin-bottom: 40px;
+}
 .callme {
   width: 200px;
   height: 200px;
@@ -790,8 +797,16 @@ body .contact-form .contact-submit {
   font-weight: 400;
 }
 /*Widget Area*/
+.widget-area {
+  font-weight: 400;
+}
+.widget-area .widget-title {
+  color: #393939;
+}
 .widget-area .widget ul > li {
   list-style: none;
+  padding-bottom: 5px;
+  line-height: 120%;
 }
 .widget-area .widget > ul {
   margin-left: 0;
@@ -800,6 +815,9 @@ body .contact-form .contact-submit {
   margin-left: 0;
 }
 /*Footer*/
+.site-footer {
+  margin-top: 30px;
+}
 .site-footer-container {
   text-align: center;
 }
@@ -893,7 +911,7 @@ article .entry-meta-top .post-like .alreadyvoted {
 
   background: url(images/post-thumb.png) no-repeat center;
   overflow: hidden;
-  background-color: #66696d !important;
+  background-color: #393939 !important;
   padding: 0;
   margin: 0;
 }
