@@ -1013,17 +1013,18 @@ body.full-width .site-footer {
   clear: both;
   width: 100%;
 }
-@media only screen and (max-width: 673px) {
+@media only screen and (max-width: 767px) {
   #iso-loop {
-    max-width: 607px;
+    max-width: 677px;
+  }
+  .page-template-template-homepage-php ul#iso-loop li {
+    padding-right: 20px;
+    max-width: 318px;
   }
 }
 @media only screen and (max-width: 1030px) {
   #iso-loop {
     max-width: 927px;
-  }
-  .page-template-template-homepage-php ul#iso-loop li {
-    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 1403px) {
