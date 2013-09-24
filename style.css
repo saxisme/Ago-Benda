@@ -1013,10 +1013,33 @@ body.full-width .site-footer {
   clear: both;
   width: 100%;
 }
+@media only screen and (max-width: 687px) {
+  .page-template-template-homepage-php ul#iso-loop {
+    max-width: 100%;
+  }
+  .page-template-template-homepage-php ul#iso-loop li {
+    margin: 0 auto;
+    margin-left: 20px;
+    padding: 0 20px 20px 0;
+    max-width: 46.5288035450517%;
+  }
+  .page-template-template-homepage-php ul#filters li {
+    float: none;
+    display: inline-block;
+    padding: 0 0 13px 0;
+    margin-bottom: 0;
+    margin-right: 14px;
+    border: 0;
+    line-height: 37px;
+  }
+  .page-template-template-homepage-php ul#filters li a {
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+}
 @media only screen and (max-width: 797px) {
   .page-template-template-homepage-php ul#iso-loop {
     max-width: 614px;
-    margin-left: 20px;
   }
   .page-template-template-homepage-php ul#iso-loop li {
     margin: 0 auto;
