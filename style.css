@@ -1015,6 +1015,11 @@ body.full-width .site-footer {
   #iso-loop {
     max-width: 607px;
   }
+}
+@media only screen and (max-width: 1030px) {
+  #iso-loop {
+    max-width: 927px;
+  }
   .page-template-template-homepage-php #options {
     width: 95%;
     margin: 0 auto;
@@ -1049,11 +1054,6 @@ body.full-width .site-footer {
   .page-template-template-homepage-php ul#filters li a:hover {
     color: #66696d;
     border: 1px solid #66696d;
-  }
-}
-@media only screen and (max-width: 1030px) {
-  #iso-loop {
-    max-width: 927px;
   }
 }
 @media only screen and (max-width: 1403px) {
