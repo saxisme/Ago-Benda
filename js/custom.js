@@ -6,4 +6,10 @@ jQuery(document).ready(function(){
 	jQuery('.contact-form input.url').attr('placeholder', 'Website');
 	jQuery('.contact-form textarea').attr('placeholder', 'Comment*');
 
-})
+
+});
+// jQuery(document).ready(function(){
+
+// //Backstretch for 404 Page
+// jQuery('#page').backstretch('wp-content/themes/agobenda/images/oops_bkg.jpg');
+// });
