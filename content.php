@@ -7,6 +7,7 @@
 <?php if ( is_archive() || is_search() || is_home() ) { // Meta data on the left for archive and search pages ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('side-meta clear'); ?>>
 	<div class="entry-meta entry-meta-top">
+		<span class="entry-meta-hr"></span>
 		<?php agobenda_posted_on(); ?>
 		<?php
 				/* translators: used between list items, there is a space after the comma */
@@ -14,15 +15,15 @@
 				if ( $tags_list ) :
 			?>
 			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'agobenda' ), $tags_list ); ?>
+				<?php printf( __( '%1$s', 'agobenda' ), $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php
 			$key_1_value = get_post_meta( get_the_ID(), 'votes_count', true );
-			// check if the custom field has a value
-			if( ! empty( $key_1_value ) ) {
+			// check if the custom field has a value - commented
+			//if( ! empty( $key_1_value ) ) {
 			  echo getPostLikeLink(get_the_ID());
-			}
+			//}
 		?>
 	</div><!-- .entry-meta -->
 
@@ -43,23 +44,25 @@
 	<div style="clear:both"></div>
 
 	<footer class="entry-meta">
+		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'agobenda' ), __( '1 Comment / ', 'agobenda' ), __( '% Comments / ', 'agobenda' ) ); ?></span>
+		<?php endif; ?>
+
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			
+
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( __( ', ', 'agobenda' ) );
 				if ( $categories_list && agobenda_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'agobenda' ), $categories_list ); ?>
+				<?php printf( __( '%1$s', 'agobenda' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
 			
 		<?php endif; // End if 'post' == get_post_type() ?>
-
-		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'agobenda' ), __( '1 Comment', 'agobenda' ), __( '% Comments', 'agobenda' ) ); ?></span>
-		<?php endif; ?>
 
 		<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
@@ -73,6 +76,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta entry-meta-top">
+			<span class="entry-meta-hr"></span>
 			<?php agobenda_posted_on(); ?>
 			<?php
 				$key_1_value = get_post_meta( get_the_ID(), 'votes_count', true );

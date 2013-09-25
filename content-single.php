@@ -6,13 +6,14 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-meta entry-meta-top">
+		<span class="entry-meta-hr"></span>
 		<?php agobenda_posted_on(); ?>
 		<?php
 			$key_1_value = get_post_meta( get_the_ID(), 'votes_count', true );
 			// check if the custom field has a value
-			if( ! empty( $key_1_value ) ) {
+			//if( ! empty( $key_1_value ) ) {
 			  echo getPostLikeLink(get_the_ID());
-			}
+			//}
 		?>
 
 	</div><!-- .entry-meta -->

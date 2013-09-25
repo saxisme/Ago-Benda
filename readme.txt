@@ -25,6 +25,8 @@ Functions
     'orderby' => 'title'
     'posts' => -1
     'category' => ''
+- Google Analytics for logged out users
+- Shortcode for Call Me button
 
 Body Classes
 ------------
