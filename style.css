@@ -718,6 +718,7 @@ textarea:focus,
 .error404 .site-content {
   margin-top: 120px;
   min-height: 500px;
+  color: #fbfbfb !important;
 }
 .site-main {
   height: 100%;
