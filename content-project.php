@@ -111,6 +111,7 @@
 					'post_type' => 'attachment',
 					'posts_per_page' => -1,
 					'post_parent' => $post->ID,
+					'order'=> 'ASC',
 					'orderby' => 'menu_order',
 					'exclude'     => get_post_thumbnail_id()
 				) );
