@@ -342,11 +342,11 @@ add_action('wp_head', 'google_analytics_tracking_code');
  * Add rel=”lightbox” to all images embedded in a post
  * http://wpsnipp.com/index.php/functions-php/add-rel-lightbox-to-all-images-embedded-in-a-post/
  **/
-add_filter('the_content', 'my_addlightboxrel');
-function my_addlightboxrel($content) {
-       global $post;
-       $pattern ="/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
-       $replacement = '<a$1href=$2$3.$4$5 rel="lightbox" title="'.$post->post_title.'"$6>';
-       $content = preg_replace($pattern, $replacement, $content);
-       return $content;
+
+
+function add_class_attachment_link($html){
+    $postid = get_the_ID();
+    $html = str_replace('<a','<a class="project-lightbox"',$html);
+    return $html;
 }
+add_filter('wp_get_attachment_link','add_class_attachment_link',10,1);
