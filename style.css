@@ -631,6 +631,7 @@ textarea:focus,
     position: absolute;
     top: 24px;
     right: 4%;
+    color: #393939;
   }
   .navigation-main {
     margin-top: 12px;
@@ -638,6 +639,9 @@ textarea:focus,
   }
   .navigation-main .nav-menu {
     display: none;
+  }
+  .navigation-main.toggled .menu-toggle {
+    color: #9e9e9e;
   }
   .navigation-main.toggled .nav-menu {
     display: block;
