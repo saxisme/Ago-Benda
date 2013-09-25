@@ -104,7 +104,7 @@
 			<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</div> <!-- post-container -->
-	<div class="post-images">
+	<div class="post-images xxx">
 		<?php //http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
 				$attachments = get_posts( array(
 					'post_type' => 'attachment',
@@ -121,6 +121,7 @@
 					}
 					
 				}
+
 		?>
-	</div>
+	</div><!-- post-images -->
 </article><!-- #post-## -->
