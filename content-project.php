@@ -46,12 +46,12 @@
 			<?php echo '<ul class="project-details">'; ?>
 			<?php if ( get_post_meta($post->ID, $key1, true) != '') { echo '<li><span class="detail-title">Title / Client: </span><span class="project-detail">' . get_post_meta($post->ID, $key1, true) . '</span></li>';}?>
 			<?php if ( get_post_meta($post->ID, $key2, true) != '') { echo '<li><span class="detail-title">Photography: </span><span class="project-detail">' . get_post_meta($post->ID, $key2, true) . '</span></li>';}?>
-			<?php if ( $key3 != '') { echo '<li><span class="detail-title">Styling: </span><span class="project-detail">' . get_post_meta($post->ID, $key3, true) . '</span></li>';}?>
-			<?php if ( $key4 != '') { echo '<li><span class="detail-title">Makeup: </span><span class="project-detail">' . get_post_meta($post->ID, $key4, true) . '</span></li>';}?>
-			<?php if ( $key6 != '') { echo '<li><span class="detail-title">Hair: </span><span class="project-detail">' . get_post_meta($post->ID, $key6, true) . '</span></li>';}?>
-			<?php if ( $key7 != '') { echo '<li><span class="detail-title">Model: </span><span class="project-detail">' . get_post_meta($post->ID, $key7, true) . '</span></li>';}?>
-			<?php if ( $key5 != '') { echo '<li><span class="detail-title">Year: </span><span class="project-detail">' . get_post_meta($post->ID, $key5, true) . '</span></li>';}?>
-			<?php if ( $key8 != '') { echo '<li><span class="detail-title">Thanks: </span><span class="project-detail">' . get_post_meta($post->ID, $key8, true) . '</span></li>';}?>
+			<?php if ( get_post_meta($post->ID, $key3, true) != '') { echo '<li><span class="detail-title">Styling: </span><span class="project-detail">' . get_post_meta($post->ID, $key3, true) . '</span></li>';}?>
+			<?php if ( get_post_meta($post->ID, $key4, true) != '') { echo '<li><span class="detail-title">Makeup: </span><span class="project-detail">' . get_post_meta($post->ID, $key4, true) . '</span></li>';}?>
+			<?php if ( get_post_meta($post->ID, $key6, true) != '') { echo '<li><span class="detail-title">Hair: </span><span class="project-detail">' . get_post_meta($post->ID, $key6, true) . '</span></li>';}?>
+			<?php if ( get_post_meta($post->ID, $key7, true) != '') { echo '<li><span class="detail-title">Model: </span><span class="project-detail">' . get_post_meta($post->ID, $key7, true) . '</span></li>';}?>
+			<?php if ( get_post_meta($post->ID, $key5, true) != '') { echo '<li><span class="detail-title">Year: </span><span class="project-detail">' . get_post_meta($post->ID, $key5, true) . '</span></li>';}?>
+			<?php if ( get_post_meta($post->ID, $key8, true) != '') { echo '<li><span class="detail-title">Thanks: </span><span class="project-detail">' . get_post_meta($post->ID, $key8, true) . '</span></li>';}?>
 
 			<?php echo '</ul>'; ?>
 		
@@ -110,8 +110,8 @@
 				$attachments = get_posts( array(
 					'post_type' => 'attachment',
 					'posts_per_page' => -1,
-					'post_parent' => $post->ID
-					//'exclude'     => get_post_thumbnail_id()
+					'post_parent' => $post->ID,
+					'exclude'     => get_post_thumbnail_id()
 				) );
 
 				if ( $attachments ) {
