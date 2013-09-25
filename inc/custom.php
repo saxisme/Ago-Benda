@@ -25,7 +25,7 @@ function sax_project_custom_post_type() {
 		'label'               => __( 'Project', 'agobenda' ),
 		'description'         => __( 'Project information pages', 'agobenda' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'post-formats'),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'post-formats', 'repeatable-fields'),
 		'taxonomies'          => array( 'project_category', 'project_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -196,6 +196,24 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'type' => 'text_small',
 			),
 			array(
+				'name' => __('Hair', 'agobenda' ),
+				'desc' => __('', 'agobenda' ),
+				'id'   => $prefix . 'project_hair',
+				'type' => 'text_small',
+			),
+			array(
+				'name' => __('Model', 'agobenda' ),
+				'desc' => __('', 'agobenda' ),
+				'id'   => $prefix . 'project_model',
+				'type' => 'text_small',
+			),
+			array(
+				'name' => __('Special thanks', 'agobenda' ),
+				'desc' => __('', 'agobenda' ),
+				'id'   => $prefix . 'project_thanks',
+				'type' => 'text',
+			),
+			array(
 				'name' => __('Year', 'agobenda' ),
 				'desc' => __('', 'agobenda' ),
 				'id'   => $prefix . 'project_year',
@@ -340,10 +358,8 @@ add_action('wp_head', 'google_analytics_tracking_code');
 
 /**
  * Add rel=”lightbox” to all images embedded in a post
- * http://wpsnipp.com/index.php/functions-php/add-rel-lightbox-to-all-images-embedded-in-a-post/
+ * http://wpsnipp.com/index.php/functions-php/add-a-custom-class-to-wp_get_attachment_link/
  **/
-
-
 function add_class_attachment_link($html){
     $postid = get_the_ID();
     $html = str_replace('<a','<a rel="lightbox[project]"',$html);

@@ -38,6 +38,9 @@
 			$key3="_cmb_project_styling";
 			$key4="_cmb_project_makeup";
 			$key5="_cmb_project_year";
+			$key6="_cmb_project_hair";
+			$key7="_cmb_project_model";
+			$key8="_cmb_project_thanks";
 			//'<span class="project-details detail-">'
 			?>
 			<?php echo '<ul class="project-details">'; ?>
@@ -45,7 +48,11 @@
 			<?php if ( $key2 != '') { echo '<li><span class="detail-title">Photography: </span><span class="project-detail">' . get_post_meta($post->ID, $key2, true) . '</span></li>';}?>
 			<?php if ( $key3 != '') { echo '<li><span class="detail-title">Styling: </span><span class="project-detail">' . get_post_meta($post->ID, $key3, true) . '</span></li>';}?>
 			<?php if ( $key4 != '') { echo '<li><span class="detail-title">Makeup: </span><span class="project-detail">' . get_post_meta($post->ID, $key4, true) . '</span></li>';}?>
+			<?php if ( $key6 != '') { echo '<li><span class="detail-title">Hair: </span><span class="project-detail">' . get_post_meta($post->ID, $key6, true) . '</span></li>';}?>
+			<?php if ( $key7 != '') { echo '<li><span class="detail-title">Model: </span><span class="project-detail">' . get_post_meta($post->ID, $key7, true) . '</span></li>';}?>
 			<?php if ( $key5 != '') { echo '<li><span class="detail-title">Year: </span><span class="project-detail">' . get_post_meta($post->ID, $key5, true) . '</span></li>';}?>
+			<?php if ( $key8 != '') { echo '<li><span class="detail-title">Thanks: </span><span class="project-detail">' . get_post_meta($post->ID, $key8, true) . '</span></li>';}?>
+
 			<?php echo '</ul>'; ?>
 		
 			<?php
@@ -74,24 +81,6 @@
 				/* translators: used between list items, there is a space after the comma */
 				$tag_list = get_the_tag_list( '', __( ', ', 'agobenda' ) );
 
-				// if ( ! agobenda_categorized_blog() ) {
-				// 	// This blog only has 1 category so we just need to worry about tags in the meta text
-				// 	if ( '' != $tag_list ) {
-				// 		$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
-				// 	} else {
-				// 		$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
-				// 	}
-
-				// } else {
-				// 	// But this blog has loads of categories so we should probably display them here
-				// 	if ( '' != $tag_list ) {
-				// 		$meta_text = __( 'Posted in '. $cat_list. ' and tagged '. $tax_list. '.', 'agobenda' );
-				// 	} else {
-				// 		$meta_text = __( 'Posted in '. $cat_list. '.', 'agobenda' );
-				// 	}
-
-				// } // end check for categories on this blog
-
 				printf(
 					$meta_text,
 					$category_list,
@@ -104,7 +93,11 @@
 			<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</div> <!-- post-container -->
-	<div class="post-images xxx">
+	<div class="post-images">
+		<ul>
+
+		<?php //custom field for videos
+		?>	
 		<?php //http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
 				$attachments = get_posts( array(
 					'post_type' => 'attachment',
@@ -123,5 +116,6 @@
 				}
 
 		?>
+	</ul>
 	</div><!-- post-images -->
 </article><!-- #post-## -->

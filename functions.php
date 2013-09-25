@@ -157,6 +157,11 @@ require get_template_directory() . '/inc/custom.php';
 require get_template_directory() . '/inc/isotope-posts/isotope-posts.php';
 
 /**
+ * Load Repeatable Fields functions files.
+ */
+require get_template_directory() . '/inc/repeatable-fields.php';
+
+/**
  * Load Custom Metabox files.
  */
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
