@@ -44,8 +44,8 @@
 			//'<span class="project-details detail-">'
 			?>
 			<?php echo '<ul class="project-details">'; ?>
-			<?php if ( $key1 != '') { echo '<li><span class="detail-title">Title / Client: </span><span class="project-detail">' . get_post_meta($post->ID, $key1, true) . '</span></li>';}?>
-			<?php if ( $key2 != '') { echo '<li class="'. $key2 .'"><span class="detail-title">Photography: </span><span class="project-detail">' . get_post_meta($post->ID, $key2, true) . '</span></li>';}?>
+			<?php if ( get_post_meta($post->ID, $key1, true) != '') { echo '<li><span class="detail-title">Title / Client: </span><span class="project-detail">' . get_post_meta($post->ID, $key1, true) . '</span></li>';}?>
+			<?php if ( get_post_meta($post->ID, $key2, true) != '') { echo '<li><span class="detail-title">Photography: </span><span class="project-detail">' . get_post_meta($post->ID, $key2, true) . '</span></li>';}?>
 			<?php if ( $key3 != '') { echo '<li><span class="detail-title">Styling: </span><span class="project-detail">' . get_post_meta($post->ID, $key3, true) . '</span></li>';}?>
 			<?php if ( $key4 != '') { echo '<li><span class="detail-title">Makeup: </span><span class="project-detail">' . get_post_meta($post->ID, $key4, true) . '</span></li>';}?>
 			<?php if ( $key6 != '') { echo '<li><span class="detail-title">Hair: </span><span class="project-detail">' . get_post_meta($post->ID, $key6, true) . '</span></li>';}?>
