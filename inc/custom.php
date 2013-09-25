@@ -346,7 +346,7 @@ add_action('wp_head', 'google_analytics_tracking_code');
 
 function add_class_attachment_link($html){
     $postid = get_the_ID();
-    $html = str_replace('<a','<a class="project-lightbox"',$html);
+    $html = str_replace('<a','<a rel="lightbox[project]"',$html);
     return $html;
 }
 add_filter('wp_get_attachment_link','add_class_attachment_link',10,1);
