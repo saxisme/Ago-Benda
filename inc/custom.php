@@ -145,6 +145,23 @@ add_action( 'init', 'project_taxonomy_tag', 0 );
  * @link     https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress
  */
 
+// add_filter( 'cmb_meta_boxes', 'cmb_sample_metaboxes' );
+
+// function cmb_sample_metaboxes( array $meta_boxes ) {
+
+//     $meta_boxes[] = array(
+//         'title' => 'CMB Test - all fields',
+//         'pages' => 'page',
+//         'show_on' => array( 'id' => array( 1 ) ),
+//         'context'    => 'normal',
+//         'priority'   => 'high',
+//         'fields' => $fields // an array of fields - see individual field documentation.
+//     );
+
+//     return $meta_boxes; 
+
+// }
+
 add_filter( 'cmb_meta_boxes', 'cmb_sample_metaboxes' );
 /**
  * Define the metabox and field configurations.
@@ -218,6 +235,13 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'desc' => __('', 'agobenda' ),
 				'id'   => $prefix . 'project_year',
 				'type' => 'text_small',
+			),
+			array(
+				'name' => __('Videos', 'agobenda' ),
+				'desc' => __('', 'agobenda' ),
+				'id'   => $prefix . 'project_video',
+				'type' => 'text',
+				'repeatable'     => true 
 			),
 			
 		)

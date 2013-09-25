@@ -97,6 +97,14 @@
 		<ul>
 
 		<?php //custom field for videos
+		// Note 3rd param is false to retrieve all meta entries with the same key (Default is false)
+		$field_data = get_post_meta( get_the_id(), '_cmb_project_video', false ); 
+
+		foreach ( $field_data as $single_field )
+		//use wp_oembed to display youtube embeds
+		//http://stackoverflow.com/questions/14929902/how-to-use-wp-oembed-script-outside-the-content
+			$htmlcode = wp_oembed_get($single_field);
+		    echo '<li>' . $htmlcode .'</li>'; 
 		?>	
 		<?php //http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
 				$attachments = get_posts( array(
