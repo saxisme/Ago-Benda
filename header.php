@@ -35,7 +35,7 @@
 			</div>
 
 			<nav id="site-navigation" class="navigation-main" role="navigation">
-				<h1 class="menu-toggle"><?php _e( 'Menu', 'agobenda' ); ?></h1>
+				<h1 class="menu-toggle"><?php _e( '<i class="icon-reorder"></i>', 'agobenda' ); ?></h1>
 				<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'agobenda' ); ?>"><?php _e( 'Skip to content', 'agobenda' ); ?></a></div>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
