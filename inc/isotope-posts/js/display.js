@@ -15,6 +15,7 @@
 				},
 				sortBy : iso_vars.iso_sortby
 			});
+		$container.isotope( 'reloadItems' );
 		});
 		
 		$('#filters a').click(function(){

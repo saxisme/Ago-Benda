@@ -307,8 +307,8 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
  * http://codex.wordpress.org/Function_Reference/add_shortcode
  * http://diythemes.com/thesis/wordpress-shortcodes/
  **/
-function sax_callme( $atts, $content="" ) {
-	extract(shortcode_atts(array('text' => 'Call'), $atts));
-     return '<div class="callme-container"><div class="callme"><span class="callme-icon"><i class="icon-phone icon-3x"></i></span><span class="callme-title">' . $text . '</span><span class="callme-content">' . do_shortcode($content) . '</span></div></div>';
+function sax_callme( $atts, $content = null ) {
+	//extract(shortcode_atts(array($atts));
+     return '<div class="callme-container"><img src="' . get_stylesheet_directory_uri() .'/images/phone.png" /></div>';
 }
 add_shortcode( 'callme', 'sax_callme' );
