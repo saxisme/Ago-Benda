@@ -159,20 +159,20 @@ require get_template_directory() . '/inc/isotope-posts/isotope-posts.php';
 /**
  * Load Repeatable Fields functions files.
  */
-require get_template_directory() . '/inc/repeatable-fields.php';
+require_once get_template_directory() . '/inc/custom-meta-boxes/custom-meta-boxes.php';
 
 /**
  * Load Custom Metabox files.
  */
-add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
+//add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 /**
  * Initialize the metabox class.
  */
-function cmb_initialize_cmb_meta_boxes() {
+// function cmb_initialize_cmb_meta_boxes() {
 
-	if ( ! class_exists( 'cmb_Meta_Box' ) )
-		require_once 'lib/metabox/init.php';
-}
+// 	if ( ! class_exists( 'cmb_Meta_Box' ) )
+// 		require_once 'lib/metabox/init.php';
+// }
 
 /**
  * Load rating button files.
