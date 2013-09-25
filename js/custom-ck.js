@@ -1,1 +1,1 @@
-jQuery(document).ready(function(e){});
+jQuery(document).ready(function(){jQuery(".contact-form input.name").attr("placeholder","Name*");jQuery(".contact-form input.email").attr("placeholder","Email*");jQuery(".contact-form input.url").attr("placeholder","Website");jQuery(".contact-form textarea").attr("placeholder","Comment*")});

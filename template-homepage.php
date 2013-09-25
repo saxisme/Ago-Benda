@@ -17,7 +17,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					/* Wi are calling the plugin shortcode to fill the page.
+					/* We are calling the plugin shortcode to fill the page.
 					 * No content is 
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.

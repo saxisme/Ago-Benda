@@ -118,7 +118,8 @@ class IsotopePosts {
 				array (
 					'taxonomy' => $limittax,
 					'field' => 'slug',
-					'terms' => $limitedterms
+					'terms' => $limitedterms,
+					'include_children' => FALSE
 				)
 			);
 		}
