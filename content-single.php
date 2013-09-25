@@ -9,13 +9,22 @@
 		<span class="entry-meta-hr"></span>
 		<?php agobenda_posted_on(); ?>
 		<?php
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( 'Tags: ', __( ', ', 'agobenda' ) );
+				if ( $tags_list ) :
+			?>
+			<span class="tags-links">
+				<?php printf( __( '%1$s', 'agobenda' ), $tags_list ); ?>
+			</span>
+		<?php endif; // End if $tags_list ?>
+		
+		<?php
 			$key_1_value = get_post_meta( get_the_ID(), 'votes_count', true );
 			// check if the custom field has a value
 			//if( ! empty( $key_1_value ) ) {
 			  echo getPostLikeLink(get_the_ID());
 			//}
 		?>
-
 	</div><!-- .entry-meta -->
 
 	<div class="entry-container clear">
@@ -37,38 +46,14 @@
 
 	<footer class="entry-meta">
 		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'agobenda' ) );
-
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'agobenda' ) );
-
-			if ( ! agobenda_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
-				}
-
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'agobenda' );
-				}
-
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink(),
-				the_title_attribute( 'echo=0' )
-			);
-		?>
+				/* translators: used between list items, there is a space after the comma */
+				$categories_list = get_the_category_list( __( ', ', 'agobenda' ) );
+				if ( $categories_list && agobenda_categorized_blog() ) :
+			?>
+			<span class="cat-links">
+				<?php printf( __( '%1$s', 'agobenda' ), $categories_list ); ?>
+			</span>
+			<?php endif; // End if categories ?>
 
 		<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 

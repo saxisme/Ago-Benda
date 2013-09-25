@@ -763,9 +763,14 @@ textarea:focus,
   margin-top: 6px;
   margin-bottom: 12px;
 }
-.single-post .entry-meta-top,
-.blog .entry-meta-top,
-.archive .entry-meta-top {
+.moretag {
+  display: block;
+  margin-top: 24px;
+  font-weight: 400;
+}
+.single-post .entry-meta.entry-meta-top,
+.blog .entry-meta.entry-meta-top,
+.archive .entry-meta.entry-meta-top {
   float: left;
   width: 15.41666666666667%;
 }
@@ -774,6 +779,13 @@ textarea:focus,
 .archive .entry-container {
   float: right;
   width: 75%;
+}
+.single-post .entry-meta {
+  float: right;
+  width: 75%;
+}
+.single-post .post-navigation.single {
+  padding-top: 24px;
 }
 .blog .page-title {
   display: none;

@@ -11,13 +11,13 @@
 		<?php agobenda_posted_on(); ?>
 		<?php
 				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'agobenda' ) );
+				$tags_list = get_the_tag_list( 'Tags: ', __( ', ', 'agobenda' ) );
 				if ( $tags_list ) :
 			?>
 			<span class="tags-links">
 				<?php printf( __( '%1$s', 'agobenda' ), $tags_list ); ?>
 			</span>
-			<?php endif; // End if $tags_list ?>
+		<?php endif; // End if $tags_list ?>
 		<?php
 			$key_1_value = get_post_meta( get_the_ID(), 'votes_count', true );
 			// check if the custom field has a value - commented
