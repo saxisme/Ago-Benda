@@ -351,7 +351,7 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
  **/
 function sax_callme( $atts, $content = null ) {
 	//extract(shortcode_atts(array($atts));
-     return '<div class="callme-container"><img src="' . get_stylesheet_directory_uri() .'/images/phone.png" /></div>';
+     return '<div class="callme-container"><img src="' . get_stylesheet_directory_uri() .'/images/phone.png" width="300" height="300"/></div>';
 }
 add_shortcode( 'callme', 'sax_callme' );
 
