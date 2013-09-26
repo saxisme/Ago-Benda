@@ -25,7 +25,7 @@ function sax_project_custom_post_type() {
 		'label'               => __( 'Project', 'agobenda' ),
 		'description'         => __( 'Project information pages', 'agobenda' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'post-formats', 'repeatable-fields'),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'post-formats', 'author'),
 		'taxonomies'          => array( 'project_category', 'project_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
