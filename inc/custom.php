@@ -228,7 +228,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'name' => __('Special thanks', 'agobenda' ),
 				'desc' => __('', 'agobenda' ),
 				'id'   => $prefix . 'project_thanks',
-				'type' => 'text',
+				'type' => 'textarea',
 			),
 			array(
 				'name' => __('Year', 'agobenda' ),
@@ -241,6 +241,13 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'desc' => __('', 'agobenda' ),
 				'id'   => $prefix . 'project_video',
 				'type' => 'text',
+				'repeatable'     => true 
+			),
+			array(
+				'name' => __('Videos', 'agobenda' ),
+				'desc' => __('', 'agobenda' ),
+				'id'   => $prefix . 'project_video',
+				'type' => 'oembed',
 				'repeatable'     => true 
 			),
 			
