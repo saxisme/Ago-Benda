@@ -184,7 +184,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 		'fields'     => array(
 			array(
 				'name' => __('', 'agobenda' ),
-				'desc' => __('Fill up the project detail fields.<br />To insert a link use the following format:<br />&lt;a href="http://www.example.com" title="Write the title of the link" target="_blank"&gt;Text to link&lt;a/&gt;', 'agobenda' ),
+				'desc' => __('Fill up the project detail fields.<br />To insert a link use the following format:<br />&lt;a href="http://www.example.com" title="Write the title of the link" target="_blank"&gt;Text to link&lt;/a&gt;', 'agobenda' ),
 				'id'   => $prefix . 'project_help',
 				'type' => 'title',
 			),
