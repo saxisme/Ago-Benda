@@ -150,7 +150,7 @@ body.single-project .post-navigation ul#filters li a.selected,body.single-projec
 body.single-project .post-container{width:41.666666666667%;float:left}
 body.single-project .post-images{width:58.333333333333%;float:right}body.single-project .post-images li{list-style:none;margin-bottom:24px}
 body.single-project .project-details{list-style:none;margin-left:0}
-body.single-project .project-detail{color:#393939}
+body.single-project .project-detail{color:#393939}body.single-project .project-detail a{border-bottom:1px dotted}
 body div.sharedaddy div.sd-block{border-top:0}body div.sharedaddy div.sd-block .sd-content{float:none}
 .content-area{float:left;margin:0 -26.47058823529412% 0 0;width:100%}
 .site-main{margin:0 26.47058823529412% 0 0;padding-right:48px;display:block}
