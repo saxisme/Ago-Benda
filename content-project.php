@@ -99,7 +99,7 @@
 		<?php //custom field for videos
 		// Note 3rd param is false to retrieve all meta entries with the same key (Default is false)
 		$field_data = get_post_meta( get_the_id(), '_cmb_project_video', false ); 
-		if ($field_data != '') {
+		if ( $field_data = array('') ) {
 		foreach ( $field_data as $single_field )
 		//use wp_oembed to display youtube embeds
 		//http://stackoverflow.com/questions/14929902/how-to-use-wp-oembed-script-outside-the-content
