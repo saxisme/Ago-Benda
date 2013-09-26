@@ -184,7 +184,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 		'fields'     => array(
 			array(
 				'name' => __('', 'agobenda' ),
-				'desc' => __('Fill up the project detail fields.', 'agobenda' ),
+				'desc' => __('Fill up the project detail fields.<br />To insert a link use the following format:<br />', 'agobenda' ),
 				'id'   => $prefix . 'project_help',
 				'type' => 'title',
 			),
@@ -241,13 +241,6 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'desc' => __('', 'agobenda' ),
 				'id'   => $prefix . 'project_video',
 				'type' => 'text',
-				'repeatable'     => true 
-			),
-			array(
-				'name' => __('Videos', 'agobenda' ),
-				'desc' => __('', 'agobenda' ),
-				'id'   => $prefix . 'project_video',
-				'type' => 'oembed',
 				'repeatable'     => true 
 			),
 			
