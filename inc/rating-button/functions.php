@@ -9,7 +9,7 @@ add_action('wp_ajax_post-like', 'post_like');
  * Enqueue scripts and styles
  */
 function agobenda_post_like_scripts() {
-	wp_enqueue_script('like_post', get_template_directory_uri().'/inc/rating-button/post-like.js', array('jquery'), '1.0', true );
+	wp_enqueue_script('like_post', get_template_directory_uri().'/inc/rating-button/post-like-ck.js', array('jquery'), '1.0', true );
 
 	wp_localize_script('like_post', 'ajax_var', array(
 		'url' => admin_url('admin-ajax.php'),
