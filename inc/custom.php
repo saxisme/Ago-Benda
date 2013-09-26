@@ -404,6 +404,11 @@ function custom_fix_blog_tab_on_cpt($classes,$item,$args) {
 }
 add_filter('nav_menu_css_class','custom_fix_blog_tab_on_cpt',10,3);
 
+/**
+ * Fix current parent page for Single CPT page
+ * http://wpsnipp.com/index.php/functions-php/add-a-custom-class-to-wp_get_attachment_link/
+ * http://www.tammyhartdesigns.com/wordpress/highlight-menu-item-for-custom-post-types/
+ **/
 add_filter( 'nav_menu_css_class', 'namespace_menu_classes', 10, 2 );
 function namespace_menu_classes( $classes , $item ){
 	if ( get_post_type() == 'project' || is_archive( 'project' ) ) {
