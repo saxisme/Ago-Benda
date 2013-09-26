@@ -390,3 +390,31 @@ function add_class_attachment_link($html){
     return $html;
 }
 add_filter('wp_get_attachment_link','add_class_attachment_link',10,1);
+
+function custom_fix_blog_tab_on_cpt($classes,$item,$args) {
+    if(!is_singular('post') && !is_category() && !is_tag()) {
+        $blog_page_id = intval(get_option('page_for_posts'));
+        if($blog_page_id != 0) {
+            if($item->object_id == $blog_page_id) {
+				unset($classes[array_search('current_page_parent',$classes)]);
+			}
+        }
+    }
+    return $classes;
+}
+add_filter('nav_menu_css_class','custom_fix_blog_tab_on_cpt',10,3);
+
+add_filter( 'nav_menu_css_class', 'namespace_menu_classes', 10, 2 );
+function namespace_menu_classes( $classes , $item ){
+	if ( get_post_type() == 'project' || is_archive( 'project' ) ) {
+		// remove that unwanted classes if it's found
+		$classes = str_replace( 'current_page_parent', '', $classes );
+		// find the url you want and add the class you want
+		$url = site_url().'/';
+		if ( $item->url == $url ) {
+			$classes = str_replace( 'menu-item', 'menu-item current_page_item', $classes );
+			remove_filter( 'nav_menu_css_class', 'namespace_menu_classes', 10, 2 );
+		}
+	}
+	return $classes;
+}

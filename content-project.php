@@ -17,7 +17,7 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
-			<?php 
+			<?php
 			//remove the jetpacj sharing filter
 				remove_filter( 'the_content', 'sharing_display', 19 ); 
 			?>
