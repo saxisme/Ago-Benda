@@ -1,3 +1,4 @@
+//Jetpack Contact Form placeholders
 jQuery(document).ready(function(){
 
 	//Jetpack Contact Form Placeholder Values
@@ -8,8 +9,19 @@ jQuery(document).ready(function(){
 
 
 });
-// jQuery(document).ready(function(){
 
-// //Backstretch for 404 Page
-// jQuery('#page').backstretch('wp-content/themes/agobenda/images/oops_bkg.jpg');
-// });
+//Smooth Back to Top Effect
+//http://www.wpbeginner.com/wp-themes/how-to-add-a-smooth-scroll-to-top-effect-in-wordpress-using-jquery/
+jQuery(document).ready(function($){
+	$(window).scroll(function(){
+        if ($(this).scrollTop() < 200) {
+			$('#smoothup') .fadeOut();
+        } else {
+			$('#smoothup') .fadeIn();
+        }
+    });
+	$('#smoothup').on('click', function(){
+		$('html, body').animate({scrollTop:0}, 'fast');
+		return false;
+		});
+});
