@@ -785,6 +785,11 @@ textarea:focus,
   float: right;
   width: 75%;
 }
+.single-post .entry-content,
+.blog .entry-content,
+.archive .entry-content {
+  width: 100%;
+}
 .single-post .entry-meta {
   float: right;
   width: 75%;
