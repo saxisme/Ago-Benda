@@ -36,7 +36,6 @@
 							} else {
 								echo ' / ' . $term->name; 
 							}
-							echo $counter1++;
 						}
 					}
 				}
