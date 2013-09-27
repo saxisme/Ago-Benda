@@ -32,13 +32,18 @@
 						$counter = 1;
 						echo '<span class="project-category">';
 						foreach($project_terms as $term){
+							
 							if ( $counter = 1 ) {
-							 	echo $term->name; 
-							 	$counter++;
-							} else {
-								echo '&nbsp;/&nbsp;uffa ' . $term->name; 
 								$counter++;
+							 	echo $term->name; 
+							 	//$counter++;
+							 	echo $counter;
+							} elseif ( $counter>1 ) {
+								echo '&nbsp;/&nbsp;uffa ' . $term->name; 
+								//$counter++;
+								echo $counter;
 							}
+
 						}
 						echo '</span>';
 					}
