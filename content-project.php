@@ -126,7 +126,7 @@
 			    echo '<li class="video-container">' . $htmlcode .'</li>'; 
 			}
 		} 
-		echo $counter;?>	
+		?>	
 		<?php //http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
 				$attachments = get_posts( array(
 					'post_type' => 'attachment',
