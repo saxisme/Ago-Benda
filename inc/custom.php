@@ -248,6 +248,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'id'   => $prefix . 'project_video',
 				'type' => 'text',
 				'repeatable'     => true,
+				'repeatable_max' => 15, 
 			),
 			
 		)
