@@ -219,6 +219,12 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'type' => 'text',
 			),
 			array(
+				'name' => __('Nail art', 'agobenda' ),
+				'desc' => __('', 'agobenda' ),
+				'id'   => $prefix . 'project_nailart',
+				'type' => 'text',
+			),
+			array(
 				'name' => __('Model', 'agobenda' ),
 				'desc' => __('', 'agobenda' ),
 				'id'   => $prefix . 'project_model',
@@ -241,7 +247,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 				'desc' => __('', 'agobenda' ),
 				'id'   => $prefix . 'project_video',
 				'type' => 'text',
-				'repeatable'     => true 
+				'repeatable'     => true,
 			),
 			
 		)
