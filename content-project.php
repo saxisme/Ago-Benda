@@ -34,7 +34,7 @@
 							if ( $counter = 1 ) {
 							 	echo $term->name; 
 							} else {
-								echo ' / ' . $term->name; 
+								echo '&nbsp;/&nbsp; ' . $term->name; 
 							}
 						}
 					}
