@@ -29,8 +29,8 @@
 				if(!empty($project_terms)){
 					
 					if(!is_wp_error( $project_terms )){
-						$counter1 = 1;
-						echo '<span class="project-category>';
+						$counter = 1;
+						echo '<span class="project-category">';
 						foreach($project_terms as $term){
 							if ( $counter = 1 ) {
 							 	echo $term->name; 
