@@ -123,7 +123,7 @@
 			//use wp_oembed to display youtube embeds
 			//http://stackoverflow.com/questions/14929902/how-to-use-wp-oembed-script-outside-the-content
 				$htmlcode = wp_oembed_get($single_field);
-			    echo '<li class="video-container '.$counter.'">' . $htmlcode .'</li>'; 
+			    echo '<li class="video-container">' . $htmlcode .'</li>'; 
 			}
 		} 
 		echo $counter;?>	
