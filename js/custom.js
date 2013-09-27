@@ -25,3 +25,7 @@ jQuery(document).ready(function($){
 		return false;
 		});
 });
+
+jQuery(document).ready(function($){
+	$(window).resize(function(){ $('#iso-loop').isotope('reLayout'); });
+});

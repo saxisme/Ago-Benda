@@ -41,6 +41,8 @@
 			$key6="_cmb_project_hair";
 			$key7="_cmb_project_model";
 			$key8="_cmb_project_thanks";
+			$key9="_cmb_project_nailart";
+
 			//'<span class="project-details detail-">'
 			?>
 			<?php echo '<ul class="project-details">'; ?>
@@ -49,6 +51,7 @@
 			<?php if ( get_post_meta($post->ID, $key3, true) != '') { echo '<li><span class="detail-title">Styling: </span><span class="project-detail">' . get_post_meta($post->ID, $key3, true) . '</span></li>';}?>
 			<?php if ( get_post_meta($post->ID, $key4, true) != '') { echo '<li><span class="detail-title">Makeup: </span><span class="project-detail">' . get_post_meta($post->ID, $key4, true) . '</span></li>';}?>
 			<?php if ( get_post_meta($post->ID, $key6, true) != '') { echo '<li><span class="detail-title">Hair: </span><span class="project-detail">' . get_post_meta($post->ID, $key6, true) . '</span></li>';}?>
+			<?php if ( get_post_meta($post->ID, $key9, true) != '') { echo '<li><span class="detail-title">Nail art: </span><span class="project-detail">' . get_post_meta($post->ID, $key9, true) . '</span></li>';}?>
 			<?php if ( get_post_meta($post->ID, $key7, true) != '') { echo '<li><span class="detail-title">Model: </span><span class="project-detail">' . get_post_meta($post->ID, $key7, true) . '</span></li>';}?>
 			<?php if ( get_post_meta($post->ID, $key5, true) != '') { echo '<li><span class="detail-title">Year: </span><span class="project-detail">' . get_post_meta($post->ID, $key5, true) . '</span></li>';}?>
 			<?php if ( get_post_meta($post->ID, $key8, true) != '') { echo '<li><span class="detail-title">Thanks: </span><span class="project-detail">' . get_post_meta($post->ID, $key8, true) . '</span></li>';}?>
@@ -100,12 +103,15 @@
 		// Note 3rd param is false to retrieve all meta entries with the same key (Default is false)
 		$field_data = get_post_meta( get_the_id(), '_cmb_project_video', false ); 
 		if ( !empty($field_data) ) {
+		$counter = 0;
 		foreach ( $field_data as $single_field )
 		//use wp_oembed to display youtube embeds
 		//http://stackoverflow.com/questions/14929902/how-to-use-wp-oembed-script-outside-the-content
 			$htmlcode = wp_oembed_get($single_field);
-		    echo '<li class="video-container">' . $htmlcode .'</li>'; 
-		} ?>	
+			$counter++;
+		    //echo '<li class="video-container '.$counter.'">' . $htmlcode .'</li>'; 
+		} 
+		echo $counter;?>	
 		<?php //http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
 				$attachments = get_posts( array(
 					'post_type' => 'attachment',
