@@ -34,12 +34,11 @@
 						foreach($project_terms as $term){
 							if ( $counter = 1 ) {
 							 	echo $term->name; 
-							 	echo $counter;
+							 	$counter++;
 							} else {
 								echo '&nbsp;/&nbsp;uffa ' . $term->name; 
-								echo $counter;
+								$counter++;
 							}
-							$counter++;
 						}
 						echo '</span>';
 					}
