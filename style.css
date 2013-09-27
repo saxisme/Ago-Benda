@@ -1115,6 +1115,9 @@ body.single-project .post-images li {
   list-style: none;
   margin-bottom: 24px;
 }
+body.single-project .project-categories {
+  text-transform: uppercase;
+}
 body.single-project .project-details {
   list-style: none;
   margin-left: 0;

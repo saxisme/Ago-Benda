@@ -23,8 +23,25 @@
 			?>
   			<?php //remove_filter( 'the_excerpt', 'sharing_display', 19 ); //to use just in case for the excerpt?>
 			<?php the_content(); ?>
-			
-			<?php //cho custom_taxonomies_terms_links(); ?>
+			<?php 
+				//http://codex.wordpress.org/Function_Reference/wp_get_object_terms
+				$project_terms = wp_get_object_terms($post->ID, 'project_category');
+				if(!empty($project_terms)){
+					
+					if(!is_wp_error( $project_terms )){
+						$counter1 = 1;
+						foreach($project_terms as $term){
+							if ( $counter = 1 ) {
+							 	echo $term->name; 
+							} else {
+								echo ' / ' . $term->name; 
+							}
+							echo $counter1++;
+						}
+					}
+				}
+			?>
+			<?php //echo custom_taxonomies_terms_links(); ?>
 
 			<?php
 			//Retrieve the taxonomy list
