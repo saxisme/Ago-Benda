@@ -30,18 +30,16 @@
 					
 					if(!is_wp_error( $project_terms )){
 						$counter = 1;
-						echo '<span class="project-category">';
+						echo '<span class="project-categories">';
 						foreach($project_terms as $term){
 							
-							if ( $counter = 1 ) {
+							if ( $counter == 1 ) {
 								$counter++;
 							 	echo $term->name; 
-							 	//$counter++;
-							 	echo $counter;
+
 							} elseif ( $counter>1 ) {
-								echo '&nbsp;/&nbsp;uffa ' . $term->name; 
-								//$counter++;
-								echo $counter;
+								echo '&nbsp;/&nbsp; ' . $term->name; 
+								$counter++;
 							}
 
 						}
