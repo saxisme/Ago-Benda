@@ -1135,6 +1135,9 @@ body div.sharedaddy div.sd-block {
 body div.sharedaddy div.sd-block .sd-content {
   float: none;
 }
+.data-carousel-extra {
+  width: 100%;
+}
 /*
 Layout: Content-Sidebar
 */
