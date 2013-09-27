@@ -37,6 +37,7 @@
 							} else {
 								echo '&nbsp;/&nbsp; ' . $term->name; 
 							}
+							$counter++;
 						}
 						echo '</span>';
 					}
