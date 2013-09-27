@@ -318,7 +318,27 @@ article .entry-meta-top .post-like .alreadyvoted{
 	background-position:-32px 0 
 }
 
-
+#smoothup { 
+	height: 50px; 
+	width: 50px; 
+	position:fixed;
+	bottom:50px;
+	right:100px;
+	//text-indent:-9999px;
+	display:none;
+	background: fade(@black, 50%);
+	-webkit-transition-duration: 0.4s; 
+	-moz-transition-duration: 0.4s; transition-duration: 0.4s; 
+}
+#smoothup i {
+	line-height: 45px;
+	padding: 17px;
+	color: @white;
+	font-size: 24px;
+}
+#smoothup:hover {
+	background: fade(@black, 80%);
+}
 
 /*Homepage Projects*/
 .page-template-template-homepage-php {
@@ -501,6 +521,7 @@ body.single-project {
 		}
 	}
 }
+
 
 /*Jetpack Sharing icons*/
 body div.sharedaddy div.sd-block {

@@ -967,6 +967,27 @@ article .entry-meta-top .voted .like,
 article .entry-meta-top .post-like .alreadyvoted {
   background-position: -32px 0;
 }
+#smoothup {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  display: none;
+  background: rgba(57, 57, 57, 0.5);
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+#smoothup i {
+  line-height: 45px;
+  padding: 17px;
+  color: #fbfbfb;
+  font-size: 24px;
+}
+#smoothup:hover {
+  background: rgba(57, 57, 57, 0.8);
+}
 /*Homepage Projects*/
 .page-template-template-homepage-php .site-content-container {
   width: 100%;

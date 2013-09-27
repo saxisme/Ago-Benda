@@ -24,6 +24,7 @@ get_header(); ?>
 					 */
 					echo do_shortcode( '[isotope-posts]' );
 				?>
+				<a href="#top" id="smoothup" title="Back to top"><i class="icon-angle-up"></i></a>
 
 			<?php endwhile; ?>
 
