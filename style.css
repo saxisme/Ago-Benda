@@ -792,6 +792,9 @@ textarea:focus,
   float: right;
   width: 75%;
 }
+.single-post .entry-container {
+  width: 100%;
+}
 .single-post .post-navigation.single {
   padding-top: 24px;
 }
