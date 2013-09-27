@@ -308,7 +308,7 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
     extract( shortcode_atts( array (
         'type' => 'post',
         'order' => 'ASC',
-        'orderby' => 'date',
+        'orderby' => 'rand',
         'posts' => -1,
         'color' => '',
         'fabric' => '',
