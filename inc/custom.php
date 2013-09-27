@@ -307,8 +307,8 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
     // define attributes and their defaults
     extract( shortcode_atts( array (
         'type' => 'post',
-        'order' => 'date',
-        'orderby' => 'title',
+        'order' => 'ASC',
+        'orderby' => 'date',
         'posts' => -1,
         'color' => '',
         'fabric' => '',
