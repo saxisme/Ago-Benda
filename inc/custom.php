@@ -184,7 +184,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 		'fields'     => array(
 			array(
 				'name' => __('', 'agobenda' ),
-				'desc' => __('Fill up the project detail fields.<br />To insert a link use the following format:<br />&lt;a href="http://www.example.com" title="Write the title of the link" target="_blank"&gt;Text to link&lt;/a&gt;', 'agobenda' ),
+				'desc' => __('Fill up the project detail fields.<br />TESTI COLLEGAMENTI FREQUENTI:<br /><br />RAFIT NOY<br />&lt;a  title="Rafit Noy" href="http://cargocollective.com/rafitnoy" target="_blank"&gt;Rafit Noy&lt;/a&gt;<br /><br />M&middot;A&middot;C<br />&lt;a title="M•A•C" href="http://www.maccosmetics.com/index.tmpl"target="_blank"&gt;M•A•C&lt;/a&gt;<br /><br />UNO models<br />&lt;a title="UNO models"href="http://www.unobcn.com/" target="_blank"&gt;UNO models&lt;/a&gt;<br /><br />Unicorn Studio<br />&lt;a title="Unicorn Studio" href="http://unicornstudiobarcelona.com/" target="_blank"&gt;Unicorn Studio&lt;/a&gt;<br /><br />Moroccanoil<br />&lt;a title="Moroccanoil" href="http://www.moroccanoil.com/" target="_blank"&gt;Moroccanoil&lt;/a&gt;<br /><br /><br />TESTI PER COLLEGAMENTI GENERICI:<br /><br />&lt;a href="http://www.example.com" title="Write the title of the link" target="_blank"&gt;Text to link&lt;/a&gt;', 'agobenda' ),
 				'id'   => $prefix . 'project_help',
 				'type' => 'title',
 			),
