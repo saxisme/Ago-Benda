@@ -59,7 +59,7 @@ class IsotopePosts {
 	public function register_plugin_scripts() {
 		//wp_enqueue_script( 'jquery' );
 		wp_register_script( 'jquery-isotope-script', get_template_directory_uri().'/inc/isotope-posts/js/jquery.isotope.min.js', array('jquery'),false );
-		wp_register_script( 'isotope-posts-plugin-script', get_template_directory_uri().( '/inc/isotope-posts/js/display.js' ), array('jquery') );
+		wp_register_script( 'isotope-posts-plugin-script', get_template_directory_uri().( '/inc/isotope-posts/js/display-ck.js' ), array('jquery') );
 	}
 
 	// * Core Functions *
