@@ -355,11 +355,11 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
  * http://codex.wordpress.org/Function_Reference/add_shortcode
  * http://diythemes.com/thesis/wordpress-shortcodes/
  **/
-function sax_callme( $atts, $content = null ) {
-	//extract(shortcode_atts(array($atts));
-     return '<div class="callme-container"><img src="' . get_stylesheet_directory_uri() .'/images/phone.png" width="300" height="300"/></div>';
-}
-add_shortcode( 'callme', 'sax_callme' );
+// function sax_callme( $atts, $content = null ) {
+// 	//extract(shortcode_atts(array($atts));
+//      return '<div class="callme-container"><img src="' . get_stylesheet_directory_uri() .'/images/phone.png" width="300" height="300"/></div>';
+// }
+// add_shortcode( 'callme', 'sax_callme' );
 
 // Include the Google Analytics Tracking Code (ga.js)
 // @ http://code.google.com/apis/analytics/docs/tracking/asyncUsageGuide.html
@@ -390,12 +390,12 @@ add_action('wp_head', 'google_analytics_tracking_code');
  * Add rel=”lightbox” to all images embedded in a post
  * http://wpsnipp.com/index.php/functions-php/add-a-custom-class-to-wp_get_attachment_link/
  **/
-function add_class_attachment_link($html){
-    $postid = get_the_ID();
-    $html = str_replace('<a','<a rel="lightbox[project]"',$html);
-    return $html;
-}
-add_filter('wp_get_attachment_link','add_class_attachment_link',10,1);
+// function add_class_attachment_link($html){
+//     $postid = get_the_ID();
+//     $html = str_replace('<a','<a rel="lightbox[project]"',$html);
+//     return $html;
+// }
+// add_filter('wp_get_attachment_link','add_class_attachment_link',10,1);
 
 function custom_fix_blog_tab_on_cpt($classes,$item,$args) {
     if(!is_singular('post') && !is_category() && !is_tag()) {
