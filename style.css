@@ -857,6 +857,9 @@ body .contact-form .contact-submit {
   margin-top: 6px;
   margin-right: -5px;
 }
+body .contact-form .form-error h3 {
+  color: #FF0000;
+}
 /*Comments Area*/
 .comments-area code {
   font-weight: 12px;
@@ -1207,6 +1210,9 @@ body.full-width .site-footer {
   .page-template-template-homepage-php ul#filters li a {
     font-size: 12px;
     font-size: 1.2rem;
+  }
+  #smoothup {
+    display: none;
   }
 }
 @media only screen and (min-width: 688px) and (max-width: 797px) {

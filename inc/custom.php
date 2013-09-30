@@ -468,3 +468,13 @@ function sax_right_now_content_table_end() {
  }
 }
 add_action( 'right_now_content_table_end' , 'sax_right_now_content_table_end' );
+
+/** Call Me shortcode
+  * http://codex.wordpress.org/Function_Reference/add_shortcode
+  * http://diythemes.com/thesis/wordpress-shortcodes/
+  **/
+function sax_callme( $atts, $content = null ) {
+	//extract(shortcode_atts(array($atts));
+     return '<div class="callme-container"><img src="' . get_stylesheet_directory_uri() .'/images/phone.png" width="300" height="300"/></div>';
+}
+add_shortcode( 'callme', 'sax_callme' );
