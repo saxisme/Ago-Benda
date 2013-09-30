@@ -29,3 +29,8 @@ jQuery(document).ready(function($){
 jQuery(document).ready(function($){
 	$(window).resize(function(){ $('#iso-loop').isotope('reLayout'); });
 });
+
+//Lightbox effect with Fancybox
+jQuery(document).ready(function(){
+    jQuery("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
+});

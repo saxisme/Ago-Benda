@@ -147,7 +147,7 @@
 				if ( $attachments ) {
 					foreach ( $attachments as $attachment ) {
 						$class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-						$thumbimg = wp_get_attachment_link( $attachment->ID, 'thumbnail-size', false );
+						$thumbimg = wp_get_attachment_link( $attachment->ID, 'thumbnail-size', false, false, false );
 						echo '<li class="' . $class . ' project-thumbnail alignright">' . $thumbimg . '</li>';
 					}
 					
