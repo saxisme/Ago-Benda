@@ -31,6 +31,6 @@ jQuery(document).ready(function($){
 });
 
 //Lightbox effect with Fancybox
-// jQuery(document).ready(function(){
-//     jQuery("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
-// });
+jQuery(document).ready(function(){
+    jQuery("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").attr('rel', 'gallery').fancybox();
+});

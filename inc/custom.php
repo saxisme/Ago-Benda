@@ -390,12 +390,12 @@ add_action('wp_head', 'google_analytics_tracking_code');
  * Add rel=”lightbox” to all images embedded in a post
  * http://wpsnipp.com/index.php/functions-php/add-a-custom-class-to-wp_get_attachment_link/
  **/
-// function add_class_attachment_link($html){
-//     $postid = get_the_ID();
-//     $html = str_replace('<a','<a rel="gallery"',$html);
-//     return $html;
-// }
-// add_filter('wp_get_attachment_link','add_class_attachment_link',10,1);
+function add_class_attachment_link($html){
+    $postid = get_the_ID();
+    $html = str_replace('<a','<a class="gallery"',$html);
+    return $html;
+}
+add_filter('wp_get_attachment_link','add_class_attachment_link',10,1);
 
 function custom_fix_blog_tab_on_cpt($classes,$item,$args) {
     if(!is_singular('post') && !is_category() && !is_tag()) {

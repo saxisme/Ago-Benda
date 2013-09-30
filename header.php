@@ -18,8 +18,8 @@
 
 <?php wp_head(); ?>
 <script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox();
+	jQuery(document).ready(function() {
+		jQuery(".fancybox").fancybox();
 	});
 </script>
 </head>
