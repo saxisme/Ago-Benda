@@ -17,11 +17,6 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 <?php wp_head(); ?>
-<script type="text/javascript">
-	jQuery(document).ready(function() {
-		jQuery(".fancybox").fancybox();
-	});
-</script>
 </head>
 
 <body <?php body_class(); ?>>
