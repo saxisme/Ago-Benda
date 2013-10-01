@@ -1197,20 +1197,20 @@ Layout: Content-Sidebar
 /*
 Layout: Full-Width
 */
-body.full-width .site-content-container {
+.full-width .site-content-container {
   max-width: 1240px;
   width: 90%;
 }
-body.full-width .content-area {
+.full-width .content-area {
   float: none;
   margin: 0 auto;
   width: 100%;
 }
-body.full-width .site-main {
+.full-width .site-main {
   margin: 0 auto;
   padding-right: 0;
 }
-body.full-width .site-footer {
+.full-width .site-footer {
   clear: both;
   width: 100%;
 }
