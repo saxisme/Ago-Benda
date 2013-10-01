@@ -68,6 +68,12 @@ if ( post_password_required() )
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'agobenda' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php
+		//http://codex.wordpress.org/Function_Reference/comment_form#Examples
+		$comments_args = array(
+		        'comment_notes_after' => '',
+		);
+
+		comment_form( $comments_args); ?>
 
 </div><!-- #comments -->
