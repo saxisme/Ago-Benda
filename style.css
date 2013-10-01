@@ -1045,6 +1045,13 @@ article .entry-meta-top .post-like .alreadyvoted {
   display: block;
   width: auto;
 }
+.page-template-template-homepage-php ul#iso-loop li {
+  margin: 0 auto;
+  padding: 0 20px 20px 0;
+  padding: 0 2.22222222222222% 2.22222222222222% 0;
+  max-width: 280px;
+  max-width: 31.11111111111111%;
+}
 .page-template-template-homepage-php .iso-thumb {
   position: relative;
   /* IMAGE HOVER ANIMATIONS */
@@ -1182,6 +1189,11 @@ body.full-width .site-footer {
   clear: both;
   width: 100%;
 }
+@media only screen and (max-width: 797px) {
+  .page-template-template-homepage-php #options {
+    display: none;
+  }
+}
 @media only screen and (max-width: 687px) {
   .page-template-template-homepage-php ul#iso-loop {
     max-width: 605px;
@@ -1191,20 +1203,7 @@ body.full-width .site-footer {
     padding: 0 20px 20px 0;
     max-width: 46.69421487603306%;
   }
-  .page-template-template-homepage-php ul#filters li {
-    float: none;
-    display: inline-block;
-    padding: 0 0 13px 0;
-    margin-bottom: 0;
-    margin-right: 14px;
-    border: 0;
-    line-height: 37px;
-  }
-  .page-template-template-homepage-php ul#filters li a {
-    font-size: 12px;
-    font-size: 1.2rem;
-  }
-  #smoothup {
+  .page-template-template-homepage-php #smoothup {
     display: none;
   }
 }
@@ -1232,10 +1231,7 @@ body.full-width .site-footer {
   }
 }
 @media only screen and (min-width: 688px) and (max-width: 797px) {
-  #iso-loop {
-    max-width: 1240px;
-    width: 100%;
-  }
+  
 }
 @media only screen and (max-width: 1030px) {
   
