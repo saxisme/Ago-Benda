@@ -1,0 +1,52 @@
+Developer Notes
+===============
+
+The theme is based on _s.
+
+Style
+-----
+The css is split in less files under the folder "less".
+In custom.less there is all the custom extra code
+The modification to the standard code is made in the respective less files
+
+Functions
+---------
+- Custom functions and customisations are inside inc/custom.php
+- Custom nav for single project added in inc/template-tags.php
+- Custom function for "love" button: http://wp.tutsplus.com/tutorials/how-to-create-a-simple-post-rating-system-with-wordpress-and-jquery/
+  Moved the scripts inside a function for correct register
+- Files are located in inc folder and css in content.less
+- Jetpack Sharing: activated for project CPT and customized code in contet-project.php to move the default position
+- uncommented function for Custom Header and used it for site logo changing the position in the header.php
+- Added shortcode for post listing - supported also in text widget.
+  Parameters: 
+  	'type' => 'post'
+    'order' => 'date'
+    'orderby' => 'title'
+    'posts' => -1
+    'category' => ''
+- Google Analytics for logged out users
+- Shortcode for Call Me button
+
+Body Classes
+------------
+Extra body classes are added through the original function in extras.php
+
+New Templates
+-------------
+Custom templates are created for:
+- template-full-width.php
+- template-homepage-php
+- single-project.php
+- content-project.php
+- inc/template-tags.php (updated)
+
+Isotope Plugin
+==============
+The isotope plugin has been modified:
+- moved plugin files in inc/isotope-posts folder and path to files accordingly
+- Changed the plugin_uri into get_template_directory_uri for functions: register_admin_scripts, isotope-posts-plugin-styles, register_plugin_scripts
+
+Fancybox effect
+===============
+http://fancyapps.com/fancybox
