@@ -1405,6 +1405,7 @@ Home Masonry
     display: none;
   }
   .site-main,
+  .single-post .site-main,
   .content-area,
   .single-post .entry-container,
   .blog .entry-container,
