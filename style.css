@@ -1216,6 +1216,9 @@ body.full-width .site-footer {
   width: 100%;
 }
 @media only screen and (max-width: 450px) {
+  .page-template-template-homepage-php .site-main {
+    overflow: hidden;
+  }
   .page-template-template-homepage-php #options {
     display: none;
   }
