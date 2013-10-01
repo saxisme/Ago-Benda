@@ -999,6 +999,10 @@ article .entry-meta-top .post-like .alreadyvoted {
   background: rgba(57, 57, 57, 0.8);
 }
 /*Homepage Projects*/
+.page-template-template-homepage-php {
+  /**** Isotope CSS3 transitions ****/
+
+}
 .page-template-template-homepage-php .site-content-container {
   width: 100%;
 }
@@ -1040,17 +1044,14 @@ article .entry-meta-top .post-like .alreadyvoted {
   border: 1px solid #66696d;
 }
 .page-template-template-homepage-php ul#iso-loop {
-  margin-left: 0;
   margin: 0 auto;
-  display: block;
-  width: auto;
+  margin-left: 10px;
+  max-width: 1240px;
+  width: 100%;
 }
-.page-template-template-homepage-php ul#iso-loop li {
-  margin: 0 auto;
-  padding: 0 20px 20px 0;
+.page-template-template-homepage-php ul#iso-loop .iso-post {
   padding: 0 2.22222222222222% 2.22222222222222% 0;
-  max-width: 280px;
-  max-width: 31.11111111111111%;
+  width: 30%;
 }
 .page-template-template-homepage-php .iso-thumb {
   position: relative;
@@ -1061,8 +1062,11 @@ article .entry-meta-top .post-like .alreadyvoted {
   background-color: #393939 !important;
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: auto;
 }
 .page-template-template-homepage-php .iso-thumb a img {
+  vertical-align: top;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -1075,6 +1079,28 @@ article .entry-meta-top .post-like .alreadyvoted {
   -moz-transform: scale(1.5);
   -o-transform: scale(1.5);
   transform: scale(1.5);
+}
+.page-template-template-homepage-php .isotope,
+.page-template-template-homepage-php .isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.page-template-template-homepage-php .isotope {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.page-template-template-homepage-php .isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
 }
 /*Projects - Single*/
 body.single-project .post-navigation {
@@ -1189,46 +1215,40 @@ body.full-width .site-footer {
   clear: both;
   width: 100%;
 }
-@media only screen and (max-width: 797px) {
+@media only screen and (max-width: 450px) {
   .page-template-template-homepage-php #options {
     display: none;
   }
+  .page-template-template-homepage-php ul#iso-loop .iso-post {
+    padding: 0 2.22222222222222% 2.22222222222222% 0;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 451px) and (max-width: 797px) {
+  .page-template-template-homepage-php #options {
+    display: none;
+  }
+  .page-template-template-homepage-php ul#iso-loop .iso-post {
+    padding: 0 2.22222222222222% 2.22222222222222% 0;
+    width: 45%;
+  }
 }
 @media only screen and (max-width: 687px) {
-  .page-template-template-homepage-php ul#iso-loop {
-    max-width: 605px;
-  }
-  .page-template-template-homepage-php ul#iso-loop li {
-    margin: 0 auto;
-    padding: 0 20px 20px 0;
-    max-width: 46.69421487603306%;
-  }
   .page-template-template-homepage-php #smoothup {
     display: none;
   }
 }
-@media only screen and (min-width: 688px) and (max-width: 797px) {
+@media only screen and (min-width: 798px) {
   .page-template-template-homepage-php ul#iso-loop {
-    max-width: 614px;
+    max-width: 1240px;
   }
-  .page-template-template-homepage-php ul#iso-loop li {
-    margin: 0 auto;
-    padding: 0 20px 20px 0;
-    max-width: 46.74267100977199%;
+  .page-template-template-homepage-php ul#iso-loop .iso-post {
+    padding: 0 2.22222222222222% 2.22222222222222% 0;
+    max-width: 380px;
   }
-  .page-template-template-homepage-php ul#filters li {
-    float: none;
-    display: inline-block;
-    padding: 0 0 13px 0;
-    margin-bottom: 0;
-    margin-right: 14px;
-    border: 0;
-    line-height: 37px;
-  }
-  .page-template-template-homepage-php ul#filters li a {
-    font-size: 12px;
-    font-size: 1.2rem;
-  }
+}
+@media only screen and (min-width: 688px) and (max-width: 797px) {
+  
 }
 @media only screen and (min-width: 688px) and (max-width: 797px) {
   
