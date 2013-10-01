@@ -1006,9 +1006,6 @@ article .entry-meta-top .post-like .alreadyvoted {
 .page-template-template-homepage-php .site-content-container {
   width: 100%;
 }
-.page-template-template-homepage-php .site-main {
-  margin-left: 2.22222222222222%;
-}
 .page-template-template-homepage-php #options {
   width: 85%;
   margin: 0 auto;
@@ -1232,6 +1229,9 @@ body.full-width .site-footer {
   }
 }
 @media only screen and (min-width: 451px) and (max-width: 797px) {
+  .page-template-template-homepage-php .site-main {
+    margin-left: 2.22222222222222%;
+  }
   .page-template-template-homepage-php #options {
     display: none;
   }
@@ -1246,6 +1246,9 @@ body.full-width .site-footer {
   }
 }
 @media only screen and (min-width: 798px) {
+  .page-template-template-homepage-php .site-main {
+    margin-left: 2.22222222222222%;
+  }
   .page-template-template-homepage-php ul#iso-loop {
     max-width: 1240px;
   }
