@@ -1006,6 +1006,9 @@ article .entry-meta-top .post-like .alreadyvoted {
 .page-template-template-homepage-php .site-content-container {
   width: 100%;
 }
+.page-template-template-homepage-php .site-main {
+  margin-left: 2.22222222222222%;
+}
 .page-template-template-homepage-php #options {
   width: 85%;
   margin: 0 auto;
@@ -1045,7 +1048,6 @@ article .entry-meta-top .post-like .alreadyvoted {
 }
 .page-template-template-homepage-php ul#iso-loop {
   margin: 0 auto;
-  margin-left: 2.22222222222222%;
   max-width: 1240px;
   width: 100%;
 }
