@@ -654,7 +654,7 @@ textarea:focus,
   }
   .navigation-main.toggled .nav-menu li a {
     padding: 12px 0;
-    padding-left: 4.8rem;
+    padding-left: 0;
     margin-left: 0;
     border-top: 3px solid #fff;
   }
@@ -1247,7 +1247,7 @@ Layout: Full-Width
 }
 @media only screen and (min-width: 798px) {
   .page-template-template-homepage-php .site-main {
-    margin-left: 2.9%;
+    margin-left: 3.1%;
   }
   .page-template-template-homepage-php ul#iso-loop {
     max-width: 1240px;
