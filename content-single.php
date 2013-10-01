@@ -51,7 +51,7 @@
 				if ( $categories_list && agobenda_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( __( '%1$s', 'agobenda' ), $categories_list ); ?>
+				<?php printf( __( 'Category: %1$s', 'agobenda' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
