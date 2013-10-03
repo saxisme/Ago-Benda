@@ -856,6 +856,7 @@ body .contact-form input.url {
 }
 body .contact-form textarea {
   width: 98%;
+  padding: 10px;
 }
 body .contact-form .contact-submit {
   float: right;
