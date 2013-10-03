@@ -905,6 +905,16 @@ body .contact-form .form-error h3 {
   font-size: 22px;
   font-weight: 400;
 }
+.callme-bar {
+  width: 100%;
+  display: block;
+  background: #66696d;
+  color: #fbfbfb;
+  text-transform: uppercase;
+}
+.callme-bar a {
+  font-weight: 400;
+}
 /*Widget Area*/
 .widget-area {
   font-weight: 400;
