@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e(".share-facebook span").replaceWith("<span>f</span>");e(".share-twitter span").replaceWith("<span>l</span>");e(".share-linkedin span").replaceWith("<span>i</span>");e(".share-google-plus-1 span").replaceWith("<span>g</span>");e(".share-pinterest span").replaceWith("<span>&amp;</span>");e(".sharedaddy").css("visibility","visible")});

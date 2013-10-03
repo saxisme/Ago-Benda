@@ -1038,6 +1038,7 @@ article .entry-meta-top .post-like .alreadyvoted {
 /*Sharing Fonticon*/
 .sharedaddy {
   font-family: 'socialicoregular';
+  visibility: hidden;
 }
 .sharedaddy ul {
   margin-left: 0;

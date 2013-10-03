@@ -5,4 +5,6 @@ jQuery( document ).ready( function( $ ) {
     $( '.share-linkedin span' ).replaceWith( '<span>i</span>' );
     $( '.share-google-plus-1 span' ).replaceWith( '<span>g</span>' );
     $( '.share-pinterest span' ).replaceWith( '<span>&amp;</span>' );
+    $('.sharedaddy').css("visibility","visible");
+
 } );
