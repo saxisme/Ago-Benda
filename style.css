@@ -783,9 +783,9 @@ textarea:focus,
 .single-post .entry-container,
 .blog .entry-container,
 .archive .entry-container,
-.single-post .nav-below,
-.blog .nav-below,
-.archive .nav-below,
+.single-post .post-navigation,
+.blog .post-navigation,
+.archive .post-navigation,
 .single-post .comments-area,
 .blog .comments-area,
 .archive .comments-area {
@@ -1447,7 +1447,7 @@ Home Masonry
   .single-post .entry-content,
   .single-post .entry-meta,
   .blog .entry-content,
-  .archive .entry-content .single-post .nav-below,
+  .archive .entry-content .single-post .post-navigation,
   .single-post .comments-area {
     float: none;
     width: 100%;
