@@ -855,7 +855,7 @@ body .contact-form input.url {
   width: 100%;
 }
 body .contact-form textarea {
-  width: 100%;
+  max-width: 98%;
 }
 body .contact-form .contact-submit {
   float: right;
