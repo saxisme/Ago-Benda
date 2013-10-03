@@ -1461,7 +1461,7 @@ Home Masonry
     max-width: 95%;
   }
   #smoothup {
-    display: none;
+    display: none!important;
   }
 }
 @media only screen and (min-width: 769px) {
