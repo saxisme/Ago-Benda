@@ -27,6 +27,7 @@ Functions
     'category' => ''
 - Google Analytics for logged out users
 - Shortcode for Call Me button
+- Remove comments info: http://codex.wordpress.org/Function_Reference/comment_form#Examples
 
 Body Classes
 ------------
