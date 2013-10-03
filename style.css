@@ -826,7 +826,7 @@ textarea:focus,
   width: 100%;
   height: 100%;
 }
-.archive.category .page-header {
+.archive .page-header {
   width: 75%;
   margin-left: 25%;
 }
