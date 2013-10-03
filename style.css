@@ -914,8 +914,9 @@ body .contact-form .form-error h3 {
   padding: 12px;
   padding: 1.2rem;
   text-align: center;
+  font-weight: inherit;
 }
-.callme-bar a {
+.callme-bar span {
   font-weight: bold;
   color: #fbfbfb;
 }
