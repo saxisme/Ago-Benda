@@ -9,14 +9,14 @@
 		<span class="entry-meta-hr"></span>
 		<?php agobenda_posted_on(); ?>
 		<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( 'Tags: ', __( ', ', 'agobenda' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tags-links">
-				<?php printf( __( '%1$s', 'agobenda' ), $tags_list ); ?>
-			</span>
-		<?php endif; // End if $tags_list ?>
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( __( ', ', 'agobenda' ) );
+			if ( $categories_list && agobenda_categorized_blog() ) :
+		?>
+		<span class="cat-links">
+			<?php printf( __( '%1$s', 'agobenda' ), $categories_list ); ?>
+		</span>
+		<?php endif; // End if categories ?>
 		
 		<?php
 			$key_1_value = get_post_meta( get_the_ID(), 'votes_count', true );
@@ -47,14 +47,14 @@
 	<footer class="entry-meta">
 		<?php
 				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'agobenda' ) );
-				if ( $categories_list && agobenda_categorized_blog() ) :
+				$tags_list = get_the_tag_list( '', __( ', ', 'agobenda' ) );
+				if ( $tags_list ) :
 			?>
-			<span class="cat-links">
-				<?php printf( __( 'Category: %1$s', 'agobenda' ), $categories_list ); ?>
+			<span class="tags-links">
+				<?php printf( __( '%1$s', 'agobenda' ), $tags_list ); ?>
 			</span>
-			<?php endif; // End if categories ?>
-
+		<?php endif; // End if $tags_list ?>
+		
 		<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 
 	</footer><!-- .entry-meta -->
