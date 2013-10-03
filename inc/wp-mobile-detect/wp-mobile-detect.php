@@ -98,7 +98,6 @@ function wpmd_is_notdevice() {
 }
 
 
-
 /********************************************//**
 * Generates [phone][/phone] shortcode which shows content on phones ONLY
 ***********************************************/
