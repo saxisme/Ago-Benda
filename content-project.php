@@ -157,3 +157,5 @@
 	</ul>
 	</div><!-- post-images -->
 </article><!-- #post-## -->
+
+<a href="#top" id="smoothup" title="Back to top"><i class="icon-angle-up"></i></a>

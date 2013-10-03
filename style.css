@@ -1460,6 +1460,9 @@ Home Masonry
     width: 100%;
     max-width: 95%;
   }
+  #smoothup {
+    display: none;
+  }
 }
 @media only screen and (min-width: 769px) {
   .site-branding {
