@@ -802,7 +802,8 @@ textarea:focus,
   display: none;
 }
 .entry-title,
-.widget-title {
+.widget-title,
+.page-title {
   font-size: 19px;
   font-size: 1.9rem;
   font-weight: 400;
@@ -824,6 +825,10 @@ textarea:focus,
   left: 0;
   width: 100%;
   height: 100%;
+}
+.archive.category .page-title {
+  width: 75%;
+  margin-left: 25%;
 }
 /*Gallery*/
 .gallery img {
