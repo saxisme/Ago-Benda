@@ -852,7 +852,7 @@ body .contact-form input[type='email'] {
   margin-bottom: 24px;
 }
 body .contact-form input.url {
-  width: 60%;
+  width: 40%;
 }
 body .contact-form textarea {
   width: 98%;
