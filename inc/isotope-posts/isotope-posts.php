@@ -25,7 +25,7 @@ class IsotopePosts {
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_scripts' ) );
 
 		// - register site styles and scripts -
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
+		//add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_scripts' ) );
 
 		// - add the settings sub-menu -
