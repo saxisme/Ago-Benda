@@ -852,10 +852,10 @@ body .contact-form input[type='email'] {
   margin-bottom: 24px;
 }
 body .contact-form input.url {
-  width: 100%;
+  width: 60%;
 }
 body .contact-form textarea {
-  max-width: 98%;
+  width: 98%;
 }
 body .contact-form .contact-submit {
   float: right;
