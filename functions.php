@@ -170,6 +170,12 @@ require get_template_directory() . '/inc/isotope-posts/isotope-posts.php';
 require_once get_template_directory() . '/inc/custom-meta-boxes/custom-meta-boxes.php';
 
 /**
+ * PHP Mobile Detect class used to detect browser or device type
+ */
+require get_template_directory() . '/inc/wp-mobile-detect/wp-mobile-detect.php';
+//require get_template_directory() . '/inc/wp-mobile-detect/mobile-detect.php';
+
+/**
  * Load Custom Metabox files.
  */
 //add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
