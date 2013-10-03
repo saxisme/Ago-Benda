@@ -51,9 +51,10 @@ class IsotopePosts {
 	}
 
 	//* Registers and enqueues plugin-specific styles 
-	public function register_plugin_styles() {
-		wp_enqueue_style( 'isotope-posts-plugin-styles', get_template_directory_uri().( '/inc/isotope-posts/css/display.css' ) );
-	}
+	//* Appended to main css style.css through Coda/Less
+	// public function register_plugin_styles() {
+	// 	wp_enqueue_style( 'isotope-posts-plugin-styles', get_template_directory_uri().( '/inc/isotope-posts/css/display.css' ) );
+	// }
 
 	// * Registers and enqueues plugin-specific scripts *
 	public function register_plugin_scripts() {

@@ -827,7 +827,7 @@ textarea:focus,
 }
 /*Gallery*/
 .gallery img {
-  border: 1px solid #66696d !important;
+  border: none;
 }
 .gallery .gallery-caption {
   font-size: 11px;
