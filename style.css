@@ -335,6 +335,7 @@ img {
   max-width: 100%;
   /* Adhere to container width. */
 
+  vertical-align: top;
 }
 button,
 input,
