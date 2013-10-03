@@ -101,7 +101,9 @@ function agobenda_scripts() {
 	
 	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400|Reenie+Beanie', '', '20130911', $media = 'all' );
 	wp_enqueue_style( 'fontawesome', '//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css', '', '20130911', $media = 'all' );
-	wp_enqueue_script( 'agobenda-custom-js', get_template_directory_uri() . '/js/custom.js', array('jquery'), '20130115', true );
+	wp_enqueue_script( 'agobenda-custom-js', get_template_directory_uri() . '/js/custom-ck.js', array('jquery'), '20130115', true );
+	wp_enqueue_script( 'agobenda-social-font', get_template_directory_uri() . '/js/social-font.js', array('jquery'), '20130115' );
+
 	if ( is_404() ) {
 		wp_enqueue_script( 'agobenda-backstretch', '//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js', array('jquery'), '20130115', true );
 		wp_enqueue_script( 'agobenda-backstretch-script', get_template_directory_uri() . '/js/backstretch.js', array('jquery'), '20130115', true );
