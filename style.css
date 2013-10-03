@@ -1445,6 +1445,10 @@ Home Masonry
     margin: 0 auto;
     padding: 0;
   }
+  body .contact-form input[type='text'],
+  body .contact-form input[type='email'] {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 769px) {
   .site-branding {
