@@ -106,6 +106,7 @@ function agobenda_scripts() {
 		wp_enqueue_script( 'agobenda-backstretch', '//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js', array('jquery'), '20130115', true );
 		wp_enqueue_script( 'agobenda-backstretch-script', get_template_directory_uri() . '/js/backstretch.js', array('jquery'), '20130115', true );
 	}
+
 	//Fancybox
 	wp_enqueue_style( 'fancybox-css', get_template_directory_uri() . '/inc/fancybox/jquery.fancybox.css', '', '20130911', $media = 'all' );
 	wp_enqueue_script( 'fancybox-js', get_template_directory_uri() . '/inc/fancybox/jquery.fancybox.pack.js', array('jquery'), '20130115', true );

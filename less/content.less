@@ -377,6 +377,30 @@ article .entry-meta-top .post-like .alreadyvoted{
 	background: fade(@black, 80%);
 }
 
+/*Sharing Fonticon*/
+.sharedaddy {
+	font-family: 'socialicoregular';
+	ul {
+		margin-left: 0;
+	}
+	li {
+		list-style: none;
+		float: left;
+		margin-right: 5px;
+		
+		.no-icon {
+			font-size: 4rem;
+			color:lighten(@gray, 10%);
+		}
+		.no-icon:hover {
+			color:@black;
+		}
+	}
+	li:last-child, .share-end {
+		display: none
+	}
+}
+
 /*Homepage Projects*/
 .page-template-template-homepage-php {
 	.site-content-container {
@@ -413,6 +437,7 @@ article .entry-meta-top .post-like .alreadyvoted{
 				border: 1px solid @gray;
 				padding: 10px 13px;
 				padding: 10px 1.3rem;
+				font-family: 'socialicoregular';
 			}
 
 			a:hover {
