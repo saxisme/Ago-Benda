@@ -1450,7 +1450,7 @@ Home Masonry
   body .contact-form input[type='email'],
   body .contact-form textarea {
     width: 100%;
-    max-width: 98%;
+    max-width: 95%;
   }
 }
 @media only screen and (min-width: 769px) {
