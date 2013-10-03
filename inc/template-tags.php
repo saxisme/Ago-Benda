@@ -188,7 +188,7 @@ function agobenda_posted_on() {
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'm/Y' ) ),
-		esc_html( get_the_date('m/Y') ),
+		esc_html( get_the_date( 'm/Y' ) ),
 		esc_attr( get_the_modified_date( 'm/Y' ) ),
 		esc_html( get_the_modified_date('m/Y') )
 	);
