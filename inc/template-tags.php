@@ -187,10 +187,10 @@ function agobenda_posted_on() {
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
 
 	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date() )
+		esc_attr( get_the_date( 'm/Y' ) ),
+		esc_html( get_the_date('m/Y') ),
+		esc_attr( get_the_modified_date( 'm/Y' ) ),
+		esc_html( get_the_modified_date('m/Y') )
 	);
 
 	printf( __( '<span class="posted-on">%1$s</span>', 'agobenda' ),
