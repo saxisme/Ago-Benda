@@ -10,14 +10,15 @@
 		<span class="entry-meta-hr"></span>
 		<?php agobenda_posted_on(); ?>
 		<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( 'Tags: ', __( ', ', 'agobenda' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tags-links">
-				<?php printf( __( '%1$s', 'agobenda' ), $tags_list ); ?>
-			</span>
-		<?php endif; // End if $tags_list ?>
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( __( ', ', 'agobenda' ) );
+			if ( $categories_list && agobenda_categorized_blog() ) :
+		?>
+		<span class="cat-links">
+			<?php printf( __( '%1$s', 'agobenda' ), $categories_list ); ?>
+		</span>
+		<?php endif; // End if categories ?>
+
 		<?php
 			$key_1_value = get_post_meta( get_the_ID(), 'votes_count', true );
 			// check if the custom field has a value - commented
@@ -45,23 +46,21 @@
 
 	<footer class="entry-meta">
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'agobenda' ), __( '1 Comment / ', 'agobenda' ), __( '% Comments / ', 'agobenda' ) ); ?></span>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment /', 'agobenda' ), __( '1 Comment / ', 'agobenda' ), __( '% Comments / ', 'agobenda' ) ); ?></span>
 		<?php endif; ?>
 
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			
-
 			<?php
 				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'agobenda' ) );
-				if ( $categories_list && agobenda_categorized_blog() ) :
+				$tags_list = get_the_tag_list( '', __( ', ', 'agobenda' ) );
+				if ( $tags_list ) :
 			?>
-			<span class="cat-links">
-				<?php printf( __( 'Category: %1$s', 'agobenda' ), $categories_list ); ?>
+			<span class="tags-links">
+				<?php printf( __( '%1$s', 'agobenda' ), $tags_list ); ?>
 			</span>
-			<?php endif; // End if categories ?>
+			<?php endif; // End if $tags_list ?>
 
-			
 		<?php endif; // End if 'post' == get_post_type() ?>
 
 		<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
