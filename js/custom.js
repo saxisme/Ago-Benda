@@ -46,7 +46,7 @@ jQuery(document).ready(function(){
 });
 
 //Video
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
     //Fluid Width Video
     //http://css-tricks.com/NetMag/FluidWidthVideo/demo.php
     $(function() {
