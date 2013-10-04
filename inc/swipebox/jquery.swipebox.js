@@ -15,7 +15,7 @@
 		var defaults = {
 			useCSS : true,
 			initialIndexOnArray : 0,
-			hideBarsDelay : 3000,
+			hideBarsDelay : 2000,
 			videoMaxWidth : 1140,
 			vimeoColor : 'CCCCCC',
 			beforeOpen: null,

@@ -1239,7 +1239,10 @@ body div.sharedaddy div.sd-block .sd-content {
 }
 /*Swipebox*/
 body #swipebox-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+body #swipebox-caption {
+  font-family: inherit;
 }
 /*
 Layout: Content-Sidebar
