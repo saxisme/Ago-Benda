@@ -108,7 +108,7 @@ function agobenda_scripts() {
 	}
 
 	//Isotope - Custom settings
-	if (is_front_page()) {
+	if ( is_front_page() ) {
 		wp_enqueue_script( 'isotope-custom-js', get_template_directory_uri() . '/js/custom-isotope-ck.js', array('jquery'), '20130115', true );
 	}
 
@@ -133,7 +133,7 @@ add_action( 'wp_enqueue_scripts', 'agobenda_scripts' );
  * Add custom image size
  */
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'homepage-thumb', 360, 9999 ); //(cropped)
+	add_image_size( 'homepage-thumb', 360, 9999 ); //( soft crop)
 	add_image_size( 'widget-thumb', 300, 300, true ); //(cropped)
 }
 /**

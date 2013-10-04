@@ -153,9 +153,13 @@
 					$category_list,
 					$tag_list,
 					get_permalink(),
-					the_title_attribute( 'echo=0' )
+					the_title_attribute( 'echo=0' ),
+					$cat_list
 				);
 			?>
+			<span class="cat-links">
+				<?php printf( __( '%1$s', 'agobenda' ), $cat_list ); ?>
+			</span>
 			<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</div> <!-- post-container -->

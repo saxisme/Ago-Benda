@@ -59,6 +59,9 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 							_e( 'Links', 'agobenda' );
 
+						elseif ( is_tax( 'project_category' ) ) :
+							_e( 'Portfolio Archive', 'agobenda' );
+
 						else :
 							_e( 'Archives', 'agobenda' );
 
