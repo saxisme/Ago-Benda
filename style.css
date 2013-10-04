@@ -1239,9 +1239,6 @@ body div.sharedaddy div.sd-block .sd-content {
 }
 /*Jetpack Tiled Gallery*/
 body .tiled-gallery-caption {
-  background: #000;
-  background: rgba(0, 0, 0, 0.8);
-  color: #FFF;
   font-family: inherit;
   font-weight: 400;
 }
