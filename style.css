@@ -956,7 +956,7 @@ body .contact-form .form-error h3 {
 
   background: url(images/post-thumb.png) no-repeat center;
   overflow: hidden;
-  background-color: #393939 !important;
+  background-color: #000!important;
   padding: 0;
   margin: 0;
 }
@@ -1243,6 +1243,10 @@ body #swipebox-overlay {
 }
 body #swipebox-caption {
   font-family: inherit;
+}
+body #swipebox-action,
+body #swipebox-caption {
+  border: none;
 }
 /*
 Layout: Content-Sidebar
