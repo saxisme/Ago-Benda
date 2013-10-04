@@ -115,17 +115,7 @@ function agobenda_scripts() {
 	//Swipebox - Touchable lightbox
 	wp_enqueue_style( 'swipebox-css', get_template_directory_uri() . '/inc/swipebox/swipebox.css', '', '20130911', $media = 'all' );
 	//wp_enqueue_script( 'swipebox-js', get_template_directory_uri() . '/inc/swipebox/jquery.swipebox.js', array('jquery'), '20130115', true );
-
-
-	//Fancybox
-	// wp_enqueue_style( 'fancybox-css', get_template_directory_uri() . '/inc/fancybox/jquery.fancybox.css', '', '20130911', $media = 'all' );
-	// wp_enqueue_script( 'fancybox-js', get_template_directory_uri() . '/inc/fancybox/jquery.fancybox.pack.js', array('jquery'), '20130115', true );
-
-	//Masonry script
-	//if ( is_home() ) {
-		//wp_enqueue_script( 'agobenda-masonry', get_template_directory_uri() . '/js/masonry.pkgd.js', array( 'jquery' ), '20130911' );
-		//wp_enqueue_script( 'agobenda-masonry-setting', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '20130911' );
-	//}
+	
 }
 add_action( 'wp_enqueue_scripts', 'agobenda_scripts' );
 
