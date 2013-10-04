@@ -14,7 +14,7 @@
 				<?php //agobenda_posted_on(); ?>
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
-		
+
 	<div class="post-images">
 			<ul>
 
@@ -62,30 +62,7 @@
 			?>
   			<?php //remove_filter( 'the_excerpt', 'sharing_display', 19 ); //to use just in case for the excerpt?>
 			<?php the_content(); ?>
-			<?php 
-				//http://codex.wordpress.org/Function_Reference/wp_get_object_terms
-				$project_terms = wp_get_object_terms($post->ID, 'project_category');
-				if(!empty($project_terms)){
-					
-					if(!is_wp_error( $project_terms )){
-						$counter = 1;
-						echo '<span class="project-categories">';
-						foreach($project_terms as $term){
-							
-							if ( $counter == 1 ) {
-								$counter++;
-							 	echo $term->name; 
-
-							} elseif ( $counter>1 ) {
-								echo '&nbsp;/&nbsp; ' . $term->name; 
-								$counter++;
-							}
-
-						}
-						echo '</span>';
-					}
-				}
-			?>
+			
 			<?php //echo custom_taxonomies_terms_links(); ?>
 
 			<?php
@@ -119,6 +96,31 @@
 			<?php if ( get_post_meta($post->ID, $key8, true) != '') { echo '<li><span class="detail-title">Thanks: </span><span class="project-detail">' . get_post_meta($post->ID, $key8, true) . '</span></li>';}?>
 
 			<?php echo '</ul>'; ?>
+
+			<?php 
+				//http://codex.wordpress.org/Function_Reference/wp_get_object_terms
+				$project_terms = wp_get_object_terms($post->ID, 'project_category');
+				if(!empty($project_terms)){
+					
+					if(!is_wp_error( $project_terms )){
+						$counter = 1;
+						echo '<span class="project-categories">';
+						foreach($project_terms as $term){
+							
+							if ( $counter == 1 ) {
+								$counter++;
+							 	echo $term->name; 
+
+							} elseif ( $counter>1 ) {
+								echo '&nbsp;/&nbsp; ' . $term->name; 
+								$counter++;
+							}
+
+						}
+						echo '</span>';
+					}
+				}
+			?>
 		
 			<?php
 				wp_link_pages( array(
@@ -154,7 +156,6 @@
 					the_title_attribute( 'echo=0' )
 				);
 			?>
-
 			<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</div> <!-- post-container -->
