@@ -926,6 +926,7 @@ body .contact-form .form-error h3 {
   padding: 1.2rem;
   text-align: center;
   font-weight: inherit;
+  margin-bottom: 1.5em;
 }
 .callme-bar span {
   font-weight: bold;
