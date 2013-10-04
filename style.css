@@ -1452,20 +1452,6 @@ Layout
 /*
 Home Masonry
 */
-@media only screen and (max-width: 640px) {
-  body.single-project .post-images {
-    width: 100%;
-    float: none;
-    margin-top: 0;
-  }
-  body.single-project .post-images ul {
-    margin-left: 0;
-  }
-  body.single-project .post-container {
-    width: 100%;
-    float: none;
-  }
-}
 @media only screen and (max-width: 768px) {
   .site-header {
     height: 120px;
@@ -1513,6 +1499,18 @@ Home Masonry
   }
   #smoothup {
     display: none!important;
+  }
+  body.single-project .post-images {
+    width: 100%;
+    float: none;
+    margin-top: 0;
+  }
+  body.single-project .post-images ul {
+    margin-left: 0;
+  }
+  body.single-project .post-container {
+    width: 100%;
+    float: none;
   }
 }
 @media only screen and (min-width: 769px) {
