@@ -7,14 +7,53 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('clear'); ?>>
-	<div class="post-container">
-		<header class="entry-header">
+	<header class="entry-header">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 
 			<div class="entry-meta">
 				<?php //agobenda_posted_on(); ?>
 			</div><!-- .entry-meta -->
 		</header><!-- .entry-header -->
+		
+	<div class="post-images">
+			<ul>
+
+			<?php //custom field for videos
+			// Note 3rd param is false to retrieve all meta entries with the same key (Default is false)
+			$field_data = get_post_meta( get_the_id(), '_cmb_project_video' ); 
+			if ( !empty($field_data) ) {
+				foreach ( $field_data as $single_field ) {
+				//use wp_oembed to display youtube embeds
+				//http://stackoverflow.com/questions/14929902/how-to-use-wp-oembed-script-outside-the-content
+					$htmlcode = wp_oembed_get($single_field);
+				    echo '<li class="video-container">' . $htmlcode .'</li>'; 
+				}
+			} 
+			?>	
+			<?php //http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
+					$attachments = get_posts( array(
+						'post_type' => 'attachment',
+						'posts_per_page' => -1,
+						'post_parent' => $post->ID,
+						'order'=> 'ASC',
+						'orderby' => 'menu_order',
+						'exclude'     => get_post_thumbnail_id()
+					) );
+
+					if ( $attachments ) {
+						foreach ( $attachments as $attachment ) {
+							$class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
+							$thumbimg = wp_get_attachment_link( $attachment->ID, 'thumbnail-size', false, false, false );
+							echo '<li class="' . $class . ' project-thumbnail alignright">' . $thumbimg . '</li>';
+						}
+						
+					}
+
+			?>
+		</ul>
+		</div><!-- post-images -->
+	<div class="post-container">
+		
 
 		<div class="entry-content">
 			<?php
@@ -119,43 +158,7 @@
 			<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</div> <!-- post-container -->
-	<div class="post-images">
-		<ul>
-
-		<?php //custom field for videos
-		// Note 3rd param is false to retrieve all meta entries with the same key (Default is false)
-		$field_data = get_post_meta( get_the_id(), '_cmb_project_video' ); 
-		if ( !empty($field_data) ) {
-			foreach ( $field_data as $single_field ) {
-			//use wp_oembed to display youtube embeds
-			//http://stackoverflow.com/questions/14929902/how-to-use-wp-oembed-script-outside-the-content
-				$htmlcode = wp_oembed_get($single_field);
-			    echo '<li class="video-container">' . $htmlcode .'</li>'; 
-			}
-		} 
-		?>	
-		<?php //http://www.wpbeginner.com/wp-themes/how-to-get-all-post-attachments-in-wordpress-except-for-featured-image/
-				$attachments = get_posts( array(
-					'post_type' => 'attachment',
-					'posts_per_page' => -1,
-					'post_parent' => $post->ID,
-					'order'=> 'ASC',
-					'orderby' => 'menu_order',
-					'exclude'     => get_post_thumbnail_id()
-				) );
-
-				if ( $attachments ) {
-					foreach ( $attachments as $attachment ) {
-						$class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-						$thumbimg = wp_get_attachment_link( $attachment->ID, 'thumbnail-size', false, false, false );
-						echo '<li class="' . $class . ' project-thumbnail alignright">' . $thumbimg . '</li>';
-					}
-					
-				}
-
-		?>
-	</ul>
-	</div><!-- post-images -->
+	
 </article><!-- #post-## -->
 
 <a href="#top" id="smoothup" title="Back to top"><i class="icon-angle-up"></i></a>
