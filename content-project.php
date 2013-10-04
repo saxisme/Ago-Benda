@@ -97,6 +97,22 @@
 
 			<?php echo '</ul>'; ?>
 
+			
+		
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . __( 'Pages:', 'agobenda' ),
+					'after'  => '</div>',
+				) );
+			?>
+
+			<?php 
+			//insert the jetpack sharing in this position
+				echo sharing_display(); 
+			?>
+		</div><!-- .entry-content -->
+
+		<footer class="entry-meta">
 			<?php 
 				//http://codex.wordpress.org/Function_Reference/wp_get_object_terms
 				$project_terms = wp_get_object_terms($post->ID, 'project_category');
@@ -104,7 +120,7 @@
 					
 					if(!is_wp_error( $project_terms )){
 						$counter = 1;
-						echo '<span class="project-categories">';
+						echo '<span class="cat-links">';
 						foreach($project_terms as $term){
 							
 							if ( $counter == 1 ) {
@@ -121,21 +137,6 @@
 					}
 				}
 			?>
-		
-			<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'agobenda' ),
-					'after'  => '</div>',
-				) );
-			?>
-
-			<?php 
-			//insert the jetpack sharing in this position
-				echo sharing_display(); 
-			?>
-		</div><!-- .entry-content -->
-
-		<footer class="entry-meta">
 			
 			<?php
 				/* translators: used between list items, there is a space after the comma */
@@ -153,13 +154,9 @@
 					$category_list,
 					$tag_list,
 					get_permalink(),
-					the_title_attribute( 'echo=0' ),
-					$cat_list
+					the_title_attribute( 'echo=0' )
 				);
 			?>
-			<span class="cat-links">
-				<?php printf( __( '%1$s', 'agobenda' ), $cat_list ); ?>
-			</span>
 			<?php edit_post_link( __( 'Edit', 'agobenda' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</div> <!-- post-container -->
