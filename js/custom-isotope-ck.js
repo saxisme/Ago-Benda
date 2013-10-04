@@ -1,0 +1,2 @@
+//Isotope
+jQuery(document).ready(function(e){function n(){e(window).width()<=797?columns=2:e(window).width()<=450?columns=1:columns=3}var t=e("#iso-loop");n();e(window).on("resize",function(){n()});t.isotope({resizable:!1,masonry:{columnWidth:t.width()/columns}});e(window).smartresize(function(){t.isotope({masonry:{columnWidth:t.width()/columns}})});e(window).resize(function(){e("#iso-loop").isotope("reLayout")})});

@@ -392,7 +392,7 @@ add_action('wp_head', 'google_analytics_tracking_code');
  **/
 function add_class_attachment_link($html){
     $postid = get_the_ID();
-    $html = str_replace('<a','<a class="gallery" rel="fancybox-gallery"',$html);
+    $html = str_replace('<a','<a class="gallery swipebox" rel="fancybox-gallery"',$html);
     return $html;
 }
 add_filter('wp_get_attachment_link','add_class_attachment_link',10,1);

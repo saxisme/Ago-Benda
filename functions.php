@@ -85,9 +85,9 @@ add_action( 'widgets_init', 'agobenda_widgets_init' );
 function agobenda_scripts() {
 	wp_enqueue_style( 'agobenda-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'agobenda-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	//wp_enqueue_script( 'agobenda-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'agobenda-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	//wp_enqueue_script( 'agobenda-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -107,9 +107,19 @@ function agobenda_scripts() {
 		wp_enqueue_script( 'agobenda-backstretch-script', get_template_directory_uri() . '/js/backstretch.js', array('jquery'), '20130115', true );
 	}
 
+	//Isotope - Custom settings
+	if (is_front_page()) {
+		wp_enqueue_script( 'isotope-custom-js', get_template_directory_uri() . '/js/custom-isotope-ck.js', array('jquery'), '20130115', true );
+	}
+
+	//Swipebox - Touchable lightbox
+	wp_enqueue_style( 'swipebox-css', get_template_directory_uri() . '/inc/swipebox/swipebox.css', '', '20130911', $media = 'all' );
+	//wp_enqueue_script( 'swipebox-js', get_template_directory_uri() . '/inc/swipebox/jquery.swipebox.js', array('jquery'), '20130115', true );
+
+
 	//Fancybox
-	wp_enqueue_style( 'fancybox-css', get_template_directory_uri() . '/inc/fancybox/jquery.fancybox.css', '', '20130911', $media = 'all' );
-	wp_enqueue_script( 'fancybox-js', get_template_directory_uri() . '/inc/fancybox/jquery.fancybox.pack.js', array('jquery'), '20130115', true );
+	// wp_enqueue_style( 'fancybox-css', get_template_directory_uri() . '/inc/fancybox/jquery.fancybox.css', '', '20130911', $media = 'all' );
+	// wp_enqueue_script( 'fancybox-js', get_template_directory_uri() . '/inc/fancybox/jquery.fancybox.pack.js', array('jquery'), '20130115', true );
 
 	//Masonry script
 	//if ( is_home() ) {
