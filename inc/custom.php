@@ -25,7 +25,7 @@ function sax_project_custom_post_type() {
 		'label'               => __( 'Project', 'agobenda' ),
 		'description'         => __( 'Project information pages', 'agobenda' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'post-formats', 'author'),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'author'),
 		'taxonomies'          => array( 'project_category', 'project_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -295,11 +295,11 @@ if ( ! function_exists('wpse_2266_custom_taxonomy_post_class') ) {
 /**
  * Modify the footer credits for JetPack Inifite Scroll
  **/
-add_filter('infinite_scroll_credit','lc_infinite_scroll_credit');
-function lc_infinite_scroll_credit(){
- $content = '<a href="/privacy-statement/" title="Privacy Statement">Privacy Statement</a>';
- return $content;
-}
+// add_filter('infinite_scroll_credit','lc_infinite_scroll_credit');
+// function lc_infinite_scroll_credit(){
+//  $content = '<a href="/privacy-statement/" title="Privacy Statement">Privacy Statement</a>';
+//  return $content;
+// }
 /** End JetPack **/
 
 /**
@@ -317,8 +317,8 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
         'order' => 'ASC',
         'orderby' => 'rand',
         'posts' => -1,
-        'color' => '',
-        'fabric' => '',
+        //'color' => '',
+        //'fabric' => '',
         'category' => '',
     ), $atts ) );
  
@@ -328,8 +328,8 @@ function rmcc_post_listing_parameters_shortcode( $atts ) {
         'order' => $order,
         'orderby' => $orderby,
         'posts_per_page' => $posts,
-        'color' => $color,
-        'fabric' => $fabric,
+        //'color' => $color,
+        //'fabric' => $fabric,
         'category_name' => $category,
     );
     $query = new WP_Query( $options );
