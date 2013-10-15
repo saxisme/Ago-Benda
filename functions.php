@@ -174,20 +174,6 @@ require_once get_template_directory() . '/inc/custom-meta-boxes/custom-meta-boxe
  * PHP Mobile Detect class used to detect browser or device type
  */
 require get_template_directory() . '/inc/wp-mobile-detect/wp-mobile-detect.php';
-//require get_template_directory() . '/inc/wp-mobile-detect/mobile-detect.php';
-
-/**
- * Load Custom Metabox files.
- */
-//add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
-/**
- * Initialize the metabox class.
- */
-// function cmb_initialize_cmb_meta_boxes() {
-
-// 	if ( ! class_exists( 'cmb_Meta_Box' ) )
-// 		require_once 'lib/metabox/init.php';
-// }
 
 /**
  * Load rating button files.
