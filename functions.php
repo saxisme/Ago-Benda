@@ -180,6 +180,11 @@ require get_template_directory() . '/inc/wp-mobile-detect/wp-mobile-detect.php';
  */
 require get_template_directory() . '/inc/rating-button/functions.php';
 
+/**
+ * Load GoogleAnalytics from Automattic .
+ */
+require_once get_template_directory() . ( '/inc/wp-google-analytics.php' );
+
 // Replaces the excerpt "more" text by a link
 function sax_new_excerpt_more($more) {
        global $post;
