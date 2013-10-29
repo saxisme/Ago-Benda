@@ -252,7 +252,8 @@ dd {
 }
 b,
 strong {
-  font-weight: bold;
+  font-weight: 400;
+  color: #393939;
 }
 dfn,
 cite,
